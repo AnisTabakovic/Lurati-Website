@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <form action="process.php" method="post">
         <label for="cpu">CPU (Cores):</label>
         <select id="cpu" name="cpu">
@@ -16,7 +17,7 @@
             <option value="30">8 Cores - 30 CHF</option>
             <option value="45">16 Cores - 45 CHF</option>
         </select>
-
+        
         <label for="ram">RAM (MB):</label>
         <select id="ram" name="ram">
             <option value="5">512 MB - 5 CHF</option>
@@ -41,5 +42,7 @@
 
         <input type="submit" value="Bestellen">
     </form>
+
+    
 </body>
 </html>
