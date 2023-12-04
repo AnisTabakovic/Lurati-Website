@@ -28,7 +28,6 @@
             <option value="160">16384 MB - 160 CHF</option>
             <option value="320">32768 MB - 320 CHF</option>
         </select>
-        <p>wdadwadadw</p>
         <label for="ssd">SSD (GB):</label>
         <select id="ssd" name="ssd">
             <option value="5">10 GB - 5 CHF</option>
