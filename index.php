@@ -11,13 +11,13 @@
 <nav>
     <ul>
         <li>
-            <h2 id="navTxt">Unser Angebot</h2>
+            <a id="navTxt" href="Angebot.html">Unser Angebot</a>
         </li>
         <li>
-            <h2 id="navTxt">Über Uns</h2>
+            <a id="navTxt" href="UeberUns.html">Über Uns</a>
         </li>
         <li>
-            <h2 id="navText">Kontakt</h2>
+            <a id="navText" href="Kontakt.html">Kontakt</a>
         </li>
     </ul>
     </nav>
