@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav>
+    <ul>
+        <li>
+            <h2 id="navTxt">Unser Angebot</h2>
+        </li>
+        <li>
+            <h2 id="navTxt">Über Uns</h2>
+        </li>
+        <li>
+            <h2 id="navText">Kontakt</h2>
+        </li>
+    </ul>
+    </nav>
     
     <form action="process.php" method="post">
         <label for="cpu">CPU (Cores):</label>
