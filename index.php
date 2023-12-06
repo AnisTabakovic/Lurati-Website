@@ -22,7 +22,7 @@
             <div class="menu-items">
               <li><a href="index.php">Home</a></li>
               <li><a href="Angebot.php">Angebot</a></li>
-              <li><a href="UeberUns">Über uns</a></li>
+              <li><a href="UeberUns.php">Über uns</a></li>
               <li><a href="Kontakt.php">Kontakt</a></li>
             </div>
           </div>
