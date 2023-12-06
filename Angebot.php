@@ -17,7 +17,7 @@
                 <span class="line line3"></span>
               </div>  
             <div class="logo">
-              <h1>Navbar</h1>
+              <h1>Omni Cloud</h1>
             </div>
             <div class="menu-items">
               <li><a href="index.php">Home</a></li>
