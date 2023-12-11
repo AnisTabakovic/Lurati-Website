@@ -16,7 +16,6 @@
             <option value="30">8 Cores - 30 CHF</option>
             <option value="45">16 Cores - 45 CHF</option>
         </select>
-        
         <label for="ram">RAM (MB):</label>
         <select id="ram" name="ram">
             <option value="5">512 MB - 5 CHF</option>
@@ -37,8 +36,36 @@
             <option value="250">500 GB - 250 CHF</option>
             <option value="500">1000 GB - 500 CHF</option>
         </select>
-
         <input type="submit" value="Bestellen">
     </form> 
+
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $selectedCpu = $_POST['cpu'];
+            $selectedRam = $_POST['ram'];
+            $selectedSsd = $_POST['ssd'];        }
+        $SmallServer = [
+          "Cores" => 4,
+          "Ram"   => 32768,
+          "SSD"   => 4000,
+        ];
+
+        $MediumServer = [
+          "Cores" => 8,
+          "Ram"   => 65536,
+          "SSD"   => 8000,
+        ];
+
+        $BigServer = [
+          "Cores" => 16,
+          "Ram"   => 131072,
+          "SSD"   => 16000,
+        ];
+        
+        $ServerLeistung = "serverleistung.txt";
+        file_put_contents($ServerLeistung,$SmallServer);
+        file_put_contents($ServerLeistung,$MediumServer);
+        file_put_contents($ServerLeistung,$BigServer);
+        ?>
 </body>
 </html>
