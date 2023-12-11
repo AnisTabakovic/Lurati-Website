@@ -1,30 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php
 
 $SmallServer = [
-  "Cores" => 4,
-  "Ram"   => 32768,
-  "SSD"   => 4000,
+    "Cores" => 4,
+    "Ram"   => 32768,
+    "SSD"   => 4000,
 ];
 
 $MediumServer = [
-  "Cores" => 8,
-  "Ram"   => 65536,
-  "SSD"   => 8000,
+    "Cores" => 8,
+    "Ram"   => 65536,
+    "SSD"   => 8000,
 ];
 
 $BigServer = [
-  "Cores" => 16,
-  "Ram"   => 131072,
-  "SSD"   => 16000,
+    "Cores" => 16,
+    "Ram"   => 131072,
+    "SSD"   => 16000,
 ];
 
 $ArraySmall = implode(";",$SmallServer);
@@ -34,13 +35,12 @@ $file="serverleistung.txt";
 $AllgemeinServerleistung = "Small".";". $ArraySmall . "\n" ."Medium". ";" . $ArrayMedium . "\n" . "Big". ";" . $ArrayBig . "\n";
 file_put_contents($file,$AllgemeinServerleistung);
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $selectedCpu = intval($_POST['cpu']);
-            $selectedRam = intval($_POST['ram']);
-            $selectedSsd = intval($_POST['ssd']);
-            $KundeName = $_Post["Name"];
-            echo $KundeName;
-            
+                if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+                        $selectedCpu = intval($_POST['cpu']);
+                        $selectedRam = intval($_POST['ram']);
+                        $selectedSsd = intval($_POST['ssd']);
+                        $KundeName = $_POST["KundeName"];
+
             $smallServerCpu = $SmallServer["Cores"];
             $smallServerRam = $SmallServer["Ram"];
             $smallServerSsd = $SmallServer["SSD"];
@@ -59,18 +59,31 @@ file_put_contents($file,$AllgemeinServerleistung);
                     $smallServerCpu -= $selectedCpu;
                     $smallServerRam -= $selectedRam;
                     $smallServerSsd -= $selectedSsd;
+                    $server = "small";
+                    $myfile = fopen("kunden.txt", "a");
+                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+                    fwrite($myfile,$all);
+                    print_r($SmallServer);
                     break;
                 case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
                     echo "The Medium Server can accommodate your selection.";
                     $mediumServerCpu -= $selectedCpu;
                     $mediumServerRam -= $selectedRam;
                     $mediumServerSsd -= $selectedSsd;
+                    $server = "medium";
+                    $myfile = fopen("kunden.txt", "a");
+                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+                    fwrite($myfile,$all);
                     break;
                 case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
                     echo "The Big Server can accommodate your selection.";
                     $bigServerCpu -= $selectedCpu;
                     $bigServerRam -= $selectedRam;
                     $bigServerSsd -= $selectedSsd;
+                    $server = "big";
+                    $myfile = fopen("kunden.txt", "a");
+                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+                    fwrite($myfile,$all);
                     break;
                 default:
                     echo "No server can accommodate your selection.";
@@ -97,7 +110,7 @@ file_put_contents($file,$AllgemeinServerleistung);
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
         <label for="KundeName">Geben Sie Ihren Namen ein</label>
-        <input type="text" name="KundeName" id="Kundename">
+        <input type="text" name="KundeName">
         <label for="cpu">CPU (Cores): </label>
         <select id="cpu" name="cpu">
             <option value="1">1 Core - 5 CHF</option>
