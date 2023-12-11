@@ -38,7 +38,8 @@ file_put_contents($file,$AllgemeinServerleistung);
             $selectedCpu = intval($_POST['cpu']);
             $selectedRam = intval($_POST['ram']);
             $selectedSsd = intval($_POST['ssd']);
-
+            $KundeName = $_Post["Name"];
+            echo $KundeName;
             
             $smallServerCpu = $SmallServer["Cores"];
             $smallServerRam = $SmallServer["Ram"];
@@ -128,11 +129,6 @@ file_put_contents($file,$AllgemeinServerleistung);
         
         <input type="submit" value="Bestellen">
     </form> 
-    <!--
-   <div> 
-        <?php echo $totalPrice ?>
-    </div>
-      -->
     
 </body>
 </html>
