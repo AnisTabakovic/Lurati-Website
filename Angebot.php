@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <form action="process.php" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">        
         <label for="cpu">CPU (Cores):</label>
         <select id="cpu" name="cpu">
             <option value="5">1 Core - 5 CHF</option>
