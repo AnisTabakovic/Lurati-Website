@@ -41,9 +41,14 @@
 
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $selectedCpu = $_POST['cpu'];
-            $selectedRam = $_POST['ram'];
-            $selectedSsd = $_POST['ssd'];        }
+            $selectedCpu = intval($_POST['cpu']);
+            $selectedRam = intval($_POST['ram']);
+            $selectedSsd = intval($_POST['ssd']);
+        
+            $totalPrice = $selectedCpu + $selectedRam + $selectedSsd;
+        
+            echo "The total price is: CHF " . $totalPrice;
+        }
         $SmallServer = [
           "Cores" => 4,
           "Ram"   => 32768,
@@ -62,10 +67,14 @@
           "SSD"   => 16000,
         ];
         
-        $ServerLeistung = "serverleistung.txt";
-        file_put_contents($ServerLeistung,$SmallServer);
-        file_put_contents($ServerLeistung,$MediumServer);
-        file_put_contents($ServerLeistung,$BigServer);
+        $ArraySmall = implode(";",$SmallServer);
+        $ArrayMedium = implode(";",$MediumServer);
+        $ArrayBig = implode(";",$BigServer);
+        $file="serverleistung.txt";
+        $AllgemeinServerleistung = $ArraySmall . $ArrayMedium . $ArrayBig;
+        file_put_contents($file,$AllgemeinServerleistung);
+
+
         ?>
 </body>
 </html>
