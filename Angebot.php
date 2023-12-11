@@ -15,7 +15,7 @@
         
             $totalPrice = $selectedCpu + $selectedRam + $selectedSsd;
             
-            // echo "The total price is: CHF " . $totalPrice;
+            
         }
         $SmallServer = [
           "Cores" => 4,
