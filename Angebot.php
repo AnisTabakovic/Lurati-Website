@@ -7,8 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $selectedCpu = intval($_POST['cpu']);
+            $selectedRam = intval($_POST['ram']);
+            $selectedSsd = intval($_POST['ssd']);
+        
+            $totalPrice = $selectedCpu + $selectedRam + $selectedSsd;
+            
+            // echo "The total price is: CHF " . $totalPrice;
+        }
+        $SmallServer = [
+          "Cores" => 4,
+          "Ram"   => 32768,
+          "SSD"   => 4000,
+        ];
+
+        $MediumServer = [
+          "Cores" => 8,
+          "Ram"   => 65536,
+          "SSD"   => 8000,
+        ];
+
+        $BigServer = [
+          "Cores" => 16,
+          "Ram"   => 131072,
+          "SSD"   => 16000,
+        ];
+        
+        $ArraySmall = implode(";",$SmallServer);
+        $ArrayMedium = implode(";",$MediumServer);
+        $ArrayBig = implode(";",$BigServer);
+        $file="serverleistung.txt";
+        $AllgemeinServerleistung = "Small".";". $ArraySmall . "\n" ."Medium". ";" . $ArrayMedium . "\n" . "Big". ";" . $ArrayBig . "\n";
+        file_put_contents($file,$AllgemeinServerleistung);
+
+
+        ?>
+
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">        
-        <label for="cpu">CPU (Cores):</label>
+        <label for="cpu">CPU (Cores): </label>
         <select id="cpu" name="cpu">
             <option value="5">1 Core - 5 CHF</option>
             <option value="10">2 Cores - 10 CHF</option>
@@ -36,45 +74,13 @@
             <option value="250">500 GB - 250 CHF</option>
             <option value="500">1000 GB - 500 CHF</option>
         </select>
+        
         <input type="submit" value="Bestellen">
     </form> 
+    <div> 
+        <?php echo $totalPrice ?>
+    </div>
 
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $selectedCpu = intval($_POST['cpu']);
-            $selectedRam = intval($_POST['ram']);
-            $selectedSsd = intval($_POST['ssd']);
-        
-            $totalPrice = $selectedCpu + $selectedRam + $selectedSsd;
-        
-            echo "The total price is: CHF " . $totalPrice;
-        }
-        $SmallServer = [
-          "Cores" => 4,
-          "Ram"   => 32768,
-          "SSD"   => 4000,
-        ];
-
-        $MediumServer = [
-          "Cores" => 8,
-          "Ram"   => 65536,
-          "SSD"   => 8000,
-        ];
-
-        $BigServer = [
-          "Cores" => 16,
-          "Ram"   => 131072,
-          "SSD"   => 16000,
-        ];
-        
-        $ArraySmall = implode(";",$SmallServer);
-        $ArrayMedium = implode(";",$MediumServer);
-        $ArrayBig = implode(";",$BigServer);
-        $file="serverleistung.txt";
-        $AllgemeinServerleistung = $ArraySmall . $ArrayMedium . $ArrayBig;
-        file_put_contents($file,$AllgemeinServerleistung);
-
-
-        ?>
+    
 </body>
 </html>
