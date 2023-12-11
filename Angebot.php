@@ -60,6 +60,6 @@
         </select>
 
         <input type="submit" value="Bestellen">
-    </form>
+    </form> 
 </body>
 </html>
