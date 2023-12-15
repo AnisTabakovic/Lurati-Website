@@ -123,7 +123,7 @@ file_put_contents($file,$AllgemeinServerleistung);
     <input type="text" name="KundeName">
     <div class="form-group">
         <div>
-            <label for="cpu"><span>CPU (Cores):</span> </label>
+            <label for="cpu">CPU (Cores): </label>
             <select id="cpu" name="cpu">
                 <option value="1">1 Core - 5 CHF</option>
                 <option value="2">2 Cores - 10 CHF</option>
@@ -133,7 +133,7 @@ file_put_contents($file,$AllgemeinServerleistung);
             </select>
         </div>
         <div>
-            <label for="ram"><span>RAM (MB):</span></label>
+            <label for="ram">RAM (MB):</label>
             <select id="ram" name="ram">
                 <option value="512">512 MB - 5 CHF</option>
                 <option value="1024">1024 MB - 10 CHF</option>
@@ -147,7 +147,7 @@ file_put_contents($file,$AllgemeinServerleistung);
             </select>
         </div>
         <div>
-            <label for="ssd"><span>SSD (GB):</span></label>
+            <label for="ssd">SSD (GB):</label>
             <select id="ssd" name="ssd">
                 <option value="10">10 GB - 5 CHF</option>
                 <option value="20">20 GB - 10 CHF</option>
