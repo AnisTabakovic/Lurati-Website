@@ -127,12 +127,20 @@ body {
   .form-group {
     display: flex;
     justify-content: space-between;
+    padding: 20px; /* Erhöhen Sie den Platz um die Elemente im grauen Feld */
 }
 
 .form-group div {
     flex: 1;
-    max-width: calc(33% - 10px); /* Drei Elemente, also 33% für jedes, minus etwas Platz für den Abstand */
-    box-sizing: border-box; /* Damit padding und border in die Breite einbezogen werden */
-    padding: 5px; /* Etwas Platz um die Elemente */
+    max-width: calc(30% - 20px); /* Reduzieren Sie die Breite ein wenig, um mehr Platz für den Abstand zu lassen */
+    box-sizing: border-box;
+    padding: 10px; /* Erhöhen Sie die Polsterung um die Elemente */
+    margin: 20px; /* Erhöhen Sie den Rand um die Elemente, um den Abstand zu erhöhen */
+}
+
+.form-group select {
+    width: 100%; /* Stellen Sie sicher, dass das Auswahlfeld die volle Breite des div einnimmt */
+    font-size: 1.2em; /* Vergrößern Sie die Schriftgröße der Optionen */
+    padding: 5px; /* Fügen Sie etwas Polsterung hinzu, um das Auswahlfeld größer zu machen */
 }
 /* Navigation */
