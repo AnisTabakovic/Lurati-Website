@@ -118,39 +118,155 @@ file_put_contents($file,$AllgemeinServerleistung);
 
         ?>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
-    <label for="KundeName">Geben Sie Ihren Namen ein</label>
-    <input type="text" name="KundeName">
-    <label for="cpu">CPU (Cores): </label>
-    <select id="cpu" name="cpu" class="w3-padding-16">
-        <option value="1">1 Core - 5 CHF</option>
-        <option value="2">2 Cores - 10 CHF</option>
-        <option value="4">4 Cores - 18 CHF</option>
-        <option value="8">8 Cores - 30 CHF</option>
-        <option value="16">16 Cores - 45 CHF</option>
-    </select>
-    <label for="ram">RAM (MB):</label>
-    <select id="ram" name="ram" class="w3-padding-16">
-        <option value="512">512 MB - 5 CHF</option>
-        <option value="1024">1024 MB - 10 CHF</option>
-        <option value="2048">2048 MB - 20 CHF</option>
-        <option value="4096">4096 MB - 40 CHF</option>
-        <option value="8192">8192 MB - 80 CHF</option>
-        <option value="16384">16384 MB - 160 CHF</option>
-        <option value="32768">32768 MB - 320 CHF</option>
-    </select>
-    <label for="ssd">SSD (GB):</label>
-    <select id="ssd" name="ssd" class="w3-padding-16">
-        <option value="10">10 GB - 5 CHF</option>
-        <option value="20">20 GB - 10 CHF</option>
-        <option value="40">40 GB - 20 CHF</option>
-        <option value="80">80 GB - 40 CHF</option>
-        <option value="240">240 GB - 120 CHF</option>
-        <option value="500">500 GB - 250 CHF</option>
-        <option value="1000">1000 GB - 500 CHF</option>
-    </select>
-    <input type="submit" value="Submit">
-</form>
+// small server
+<div class="w3-third">
+    <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-48">Small Server</li>
+        <li class="w3-padding-16">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
+                <label for="cpu">CPU (Cores): </label>
+                <select id="cpu" name="cpu">
+                    <option value="1">1 Core - 5 CHF</option>
+                    <option value="2">2 Cores - 10 CHF</option>
+                    <option value="4">4 Cores - 18 CHF</option>
+                </select>
+                <label for="ram">RAM (MB):</label>
+                <select id="ram" name="ram">
+                    <option value="512">512 MB - 5 CHF</option>
+                    <option value="1024">1024 MB - 10 CHF</option>
+                    <option value="2048">2048 MB - 20 CHF</option>
+                    <option value="4096">4096 MB - 40 CHF</option>
+                    <option value="8192">8192 MB - 80 CHF</option>
+                    <option value="16384">16384 MB - 160 CHF</option>
+                    <option value="32768">32768 MB - 320 CHF</option>
+                </select>
+                <label for="ssd">SSD (GB):</label>
+                <select id="ssd" name="ssd">
+                    <option value="10">10 GB - 5 CHF</option>
+                    <option value="20">20 GB - 10 CHF</option>
+                    <option value="40">40 GB - 20 CHF</option>
+                    <option value="80">80 GB - 40 CHF</option>
+                    <option value="240">240 GB - 120 CHF</option>
+                    <option value="500">500 GB - 250 CHF</option>
+                    <option value="1000">1000 GB - 500 CHF</option>
+                    <option value="4000">4000 GB - 2000 CHF</option>
+                </select>
+                <input type="submit" value="Bestellen">
+            </form>
+        </li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+            <h2 class="w3-wide">$ 10</h2>
+            <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+    </ul>
+</div>
+
+<!-- Medium Server -->
+<div class="w3-third">
+    <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-48">Medium Server</li>
+        <li class="w3-padding-16">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
+                <label for="cpu">CPU (Cores): </label>
+                <select id="cpu" name="cpu">
+                    <option value="1">1 Core - 5 CHF</option>
+                    <option value="2">2 Cores - 10 CHF</option>
+                    <option value="4">4 Cores - 18 CHF</option>
+                    <option value="8">8 Cores - 30 CHF</option>
+                </select>
+                <label for="ram">RAM (MB):</label>
+                <select id="ram" name="ram">
+                    <option value="512">512 MB - 5 CHF</option>
+                    <option value="1024">1024 MB - 10 CHF</option>
+                    <option value="2048">2048 MB - 20 CHF</option>
+                    <option value="4096">4096 MB - 40 CHF</option>
+                    <option value="8192">8192 MB - 80 CHF</option>
+                    <option value="16384">16384 MB - 160 CHF</option>
+                    <option value="32768">32768 MB - 320 CHF</option>
+                    <option value="65536">65536 MB - 640 CHF</option>
+                </select>
+                <label for="ssd">SSD (GB):</label>
+                <select id="ssd" name="ssd">
+                    <option value="10">10 GB - 5 CHF</option>
+                    <option value="20">20 GB - 10 CHF</option>
+                    <option value="40">40 GB - 20 CHF</option>
+                    <option value="80">80 GB - 40 CHF</option>
+                    <option value="240">240 GB - 120 CHF</option>
+                    <option value="500">500 GB - 250 CHF</option>
+                    <option value="1000">1000 GB - 500 CHF</option>
+                    <option value="4000">4000 GB - 2000 CHF</option>
+                    <option value="8000">8000 GB - 4000 CHF</option>
+                </select>
+                <input type="submit" value="Bestellen">
+            </form>
+        </li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+            <h2 class="w3-wide">$ 25</h2>
+            <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+    </ul>
+</div>
+
+<!-- Big Server -->
+<div class="w3-third">
+    <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-48">Big Server</li>
+        <li class="w3-padding-16">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
+                <label for="cpu">CPU (Cores): </label>
+                <select id="cpu" name="cpu">
+                    <option value="1">1 Core - 5 CHF</option>
+                    <option value="2">2 Cores - 10 CHF</option>
+                    <option value="4">4 Cores - 18 CHF</option>
+                    <option value="8">8 Cores - 30 CHF</option>
+                    <option value="16">16 Cores - 45 CHF</option>
+                </select>
+                <label for="ram">RAM (MB):</label>
+                <select id="ram" name="ram">
+                    <option value="512">512 MB - 5 CHF</option>
+                    <option value="1024">1024 MB - 10 CHF</option>
+                    <option value="2048">2048 MB - 20 CHF</option>
+                    <option value="4096">4096 MB - 40 CHF</option>
+                    <option value="8192">8192 MB - 80 CHF</option>
+                    <option value="16384">16384 MB - 160 CHF</option>
+                    <option value="32768">32768 MB - 320 CHF</option>
+                    <option value="65536">65536 MB - 640 CHF</option>
+                    <option value="131072">131072 MB - 1280 CHF</option>
+                </select>
+                <label for="ssd">SSD (GB):</label>
+                <select id="ssd" name="ssd">
+                    <option value="10">10 GB - 5 CHF</option>
+                    <option value="20">20 GB - 10 CHF</option>
+                    <option value="40">40 GB - 20 CHF</option>
+                    <option value="80">80 GB - 40 CHF</option>
+                    <option value="240">240 GB - 120 CHF</option>
+                    <option value="500">500 GB - 250 CHF</option>
+                    <option value="1000">1000 GB - 500 CHF</option>
+                    <option value="4000">4000 GB - 2000 CHF</option>
+                    <option value="8000">8000 GB - 4000 CHF</option>
+                    <option value="16000">16000 GB - 8000 CHF</option>
+                </select>
+                <input type="submit" value="Bestellen">
+            </form>
+        </li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+            <h2 class="w3-wide">$ 50</h2>
+            <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+    </ul>
+</div>
 
     
 </body>
