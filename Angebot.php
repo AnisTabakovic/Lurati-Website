@@ -158,7 +158,7 @@ file_put_contents($file,$AllgemeinServerleistung);
                 <option value="1000">1000 GB - 500 CHF</option>
                 <option value="4000">4000 GB - 2000 CHF</option>
                 <option value="8000">8000 GB - 4000 CHF</option>
-                <option value="16000">1600 GB - 8000 CHF</option>
+                <option value="16000">16000 GB - 8000 CHF</option>
             </select>
         </div>
     </div>
