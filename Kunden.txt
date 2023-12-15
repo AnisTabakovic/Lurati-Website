@@ -12,3 +12,6 @@ small;;1;512;10
 small;;1;512;10
 big;Flrian;16;8192;1000
 big;Flrian;16;8192;1000
+big;Flrian;16;8192;1000
+big;Flrian;16;8192;1000
+big;Flrian;16;8192;1000
