@@ -132,7 +132,7 @@ body {
 
 .form-group div {
     flex: 1;
-    max-width: calc(30% - 30px); /* Reduzieren Sie die Breite ein wenig, um mehr Platz für den Abstand zu lassen */
+    max-width: calc(33% - 30px); /* Erhöhen Sie die Breite ein wenig, um mehr Platz für das Auswahlfeld zu lassen */
     box-sizing: border-box;
     padding: 15px; /* Erhöhen Sie die Polsterung um die Elemente */
     margin: 30px; /* Erhöhen Sie den Rand um die Elemente, um den Abstand zu erhöhen */
