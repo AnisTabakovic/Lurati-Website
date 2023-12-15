@@ -174,10 +174,10 @@ file_put_contents($file,$AllgemeinServerleistung);
     </div>
     <div class="w3-third">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
+        <li class="w3-black w3-xlarge w3-padding-48">Medium Server</li>
+        <li class="w3-padding-16"><b>25GB</b> CPU</li>
+        <li class="w3-padding-16"><b>25</b> RAM</li>
+        <li class="w3-padding-16"><b>25</b> SSD</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
           <h2 class="w3-wide">$ 25</h2>
@@ -190,10 +190,10 @@ file_put_contents($file,$AllgemeinServerleistung);
     </div>
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-black w3-xlarge w3-padding-32">Big Server</li>
+        <li class="w3-padding-16"><b>50GB</b> CPU</li>
+        <li class="w3-padding-16"><b>50</b> RAM</li>
+        <li class="w3-padding-16"><b>50</b> SSD</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
           <h2 class="w3-wide">$ 50</h2>
