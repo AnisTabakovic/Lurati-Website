@@ -127,7 +127,7 @@ body {
   .form-group {
     display: flex;
     justify-content: space-between;
-    padding: 30px; /* Erhöhen Sie den Platz um die Elemente im grauen Feld */
+    padding: 300px; /* Erhöhen Sie den Platz um die Elemente im grauen Feld */
 }
 
 .form-group div {
