@@ -128,7 +128,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
 .form-group div {
     flex: 1;
+    max-width: calc(33% - 10px); /* Drei Elemente, also 33% für jedes, minus etwas Platz für den Abstand */
+    box-sizing: border-box; /* Damit padding und border in die Breite einbezogen werden */
+    padding: 5px; /* Etwas Platz um die Elemente */
 }
 /* Navigation */
