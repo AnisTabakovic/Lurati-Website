@@ -124,21 +124,15 @@ body {
       display: block;
     }
   }
- .form-group {
+  .form-group {
     display: flex;
     justify-content: space-between;
-    background-color: grey; /* Graues Feld */
-    padding: 20px; /* Platz um die Elemente im grauen Feld */
 }
 
 .form-group div {
     flex: 1;
-    max-width: calc(30% - 20px); /* Reduzieren Sie die Breite ein wenig, um mehr Platz für den Abstand zu lassen */
-    box-sizing: border-box;
-    padding: 10px; /* Erhöhen Sie die Polsterung um die Elemente */
-    margin: 10px; /* Fügen Sie einen Rand um die Elemente hinzu, um den Abstand zu erhöhen */
-    background-color: white; /* Hintergrundfarbe der Elemente */
-    height: 100px; /* Stellen Sie sicher, dass alle Elemente die gleiche Höhe haben */
-}
+    max-width: calc(33% - 10px); /* Drei Elemente, also 33% für jedes, minus etwas Platz für den Abstand */
+    box-sizing: border-box; /* Damit padding und border in die Breite einbezogen werden */
+    padding: 5px; /* Etwas Platz um die Elemente */
 }
 /* Navigation */
