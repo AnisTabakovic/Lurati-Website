@@ -15,8 +15,8 @@
 </ul> 
 
 <div class="about-section">
-  <h1>About Us Page</h1>
-  <p>Some text about who we are and what we do.</p>
+  <h1>  Überber uns</h1>
+  <p>Wir sind 3 Schüler*innen der I2a, welche den Auftrag erhalten haben eine Website aufzusetellen die VMs anbietet.</p>
   <p>Resize the browser window to see that this page is responsive by the way.</p>
 </div>
 
