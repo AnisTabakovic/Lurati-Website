@@ -124,24 +124,5 @@ body {
       display: block;
     }
   }
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px; /* Erhöhen Sie den Platz um die Elemente im grauen Feld */
-}
 
-.form-group div {
-    flex: 1;
-    max-width: calc(33% - 30px); /* Erhöhen Sie die Breite ein wenig, um mehr Platz für das Auswahlfeld zu lassen */
-    box-sizing: border-box;
-    padding: 15px; /* Erhöhen Sie die Polsterung um die Elemente */
-    margin: 30px; /* Erhöhen Sie den Rand um die Elemente, um den Abstand zu erhöhen */
-}
-
-.form-group select {
-    width: 200px; /* Stellen Sie sicher, dass das Auswahlfeld die volle Breite des div einnimmt */
-    font-size: 1.2em; /* Vergrößern Sie die Schriftgröße der Optionen */
-    padding: 50px; /* Fügen Sie etwas Polsterung hinzu, um das Auswahlfeld größer zu machen */
-    height: 40px; /* Machen Sie das Auswahlfeld länger */
-}
 /* Navigation */
