@@ -125,35 +125,6 @@ body {
     }
   }
 
-.cpu, .ram, .ssd {
-    padding : 30px;
-    background : #2d2f31; 
-    color : white;
-    font-size : 1.2em;
-    font-variant : small-caps;
-    cursor : pointer;
-    display: block;
-  }
-  
-  .cpu::after, .ram::after, .ssd::after {
-    float: right;
-    right: 10%;
-    content: "+";
-  }
-  
-  .slide {
-    clear:both;
-    width:100%;
-    height:0px;
-    overflow: hidden;
-    text-align: center;
-    transition: height .4s ease;
-  }
-  
-  .slide option {padding : 30px;}
-  
-  #cpu, #ram, #ssd {position: absolute; opacity: 0; height: 0px;}    
-  
-  #cpu:checked + .slide, #ram:checked + .slide, #ssd:checked + .slide {height: 300px;}
+
 
 /* Navigation */
