@@ -153,16 +153,15 @@ file_put_contents($file,$AllgemeinServerleistung);
         <input type="submit" value="Bestellen">
     </form> 
 
-    <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h3>PRICING</h3>
+
   <p class="w3-large">Choose a pricing plan that fits your needs.</p>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-black w3-xlarge w3-padding-32">Small Server</li>
+        <li class="w3-padding-16"><b>1-4 Cores</b> CPU</li>
+        <li class="w3-padding-16"><b>512-32768MB</b> RAM</li>
+        <li class="w3-padding-16"><b>4000GB</b> SSD</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
           <h2 class="w3-wide">$ 10</h2>
