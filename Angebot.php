@@ -8,6 +8,12 @@
         <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<ul>
+    <li><a href="index.php">Home</li>
+    <li><a herf="Angebot.php">Angebote</li>
+    <li><a herf="Kontakt.php">Kontakt</li>
+    <li><a herf="UeberUns.php">Über uns</li>
+</ul>
 <?php
 
 $SmallServer = [
