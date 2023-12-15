@@ -139,9 +139,9 @@ body {
 }
 
 .form-group select {
-    width: 1000px; /* Stellen Sie sicher, dass das Auswahlfeld die volle Breite des div einnimmt */
+    width: 200px; /* Stellen Sie sicher, dass das Auswahlfeld die volle Breite des div einnimmt */
     font-size: 1.2em; /* Vergrößern Sie die Schriftgröße der Optionen */
-    padding: 10px; /* Fügen Sie etwas Polsterung hinzu, um das Auswahlfeld größer zu machen */
-    height: 50px; /* Machen Sie das Auswahlfeld länger */
+    padding: 50px; /* Fügen Sie etwas Polsterung hinzu, um das Auswahlfeld größer zu machen */
+    height: 40px; /* Machen Sie das Auswahlfeld länger */
 }
 /* Navigation */
