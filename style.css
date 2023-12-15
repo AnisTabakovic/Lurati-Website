@@ -127,7 +127,7 @@ body {
   .form-group {
     display: flex;
     justify-content: space-between;
-    padding: 300px; /* Erhöhen Sie den Platz um die Elemente im grauen Feld */
+    padding: 30px; /* Erhöhen Sie den Platz um die Elemente im grauen Feld */
 }
 
 .form-group div {
@@ -139,7 +139,7 @@ body {
 }
 
 .form-group select {
-    width: 100%; /* Stellen Sie sicher, dass das Auswahlfeld die volle Breite des div einnimmt */
+    width: 100px; /* Stellen Sie sicher, dass das Auswahlfeld die volle Breite des div einnimmt */
     font-size: 1.2em; /* Vergrößern Sie die Schriftgröße der Optionen */
     padding: 10px; /* Fügen Sie etwas Polsterung hinzu, um das Auswahlfeld größer zu machen */
     height: 50px; /* Machen Sie das Auswahlfeld länger */
