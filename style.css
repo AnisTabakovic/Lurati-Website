@@ -124,7 +124,7 @@ body {
       display: block;
     }
   }
-  .form-group {
+ .form-group {
     display: flex;
     justify-content: space-between;
     background-color: grey; /* Graues Feld */
