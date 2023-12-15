@@ -125,21 +125,6 @@ body {
     }
   }
 
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-group div {
-    flex: 1;
-    margin: 0 10px; /* Fügt einen Abstand zwischen den Elementen hinzu */
-}
-
-.form-group label, .form-group select {
-    display: block;
-    width: 100%;
-}
-
 .cpu, .ram, .ssd {
     padding : 30px;
     background : #2d2f31; 
