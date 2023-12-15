@@ -119,43 +119,51 @@ file_put_contents($file,$AllgemeinServerleistung);
         ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
-        <label for="KundeName">Geben Sie Ihren Namen ein</label>
-        <input type="text" name="KundeName">
-        <label for="cpu">CPU (Cores): </label>
-        <select id="cpu" name="cpu">
-            <option value="1">1 Core - 5 CHF</option>
-            <option value="2">2 Cores - 10 CHF</option>
-            <option value="4">4 Cores - 18 CHF</option>
-            <option value="8">8 Cores - 30 CHF</option>
-            <option value="16">16 Cores - 45 CHF</option>
-        </select>
-        <label for="ram">RAM (MB):</label>
-        <select id="ram" name="ram">
-            <option value="512">512 MB - 5 CHF</option>
-            <option value="1024">1024 MB - 10 CHF</option>
-            <option value="2048">2048 MB - 20 CHF</option>
-            <option value="4096">4096 MB - 40 CHF</option>
-            <option value="8192">8192 MB - 80 CHF</option>
-            <option value="16384">16384 MB - 160 CHF</option>
-            <option value="32768">32768 MB - 320 CHF</option>
-        </select>
-        <label for="ssd">SSD (GB):</label>
-        <select id="ssd" name="ssd">
-            <option value="10">10 GB - 5 CHF</option>
-            <option value="20">20 GB - 10 CHF</option>
-            <option value="40">40 GB - 20 CHF</option>
-            <option value="80">80 GB - 40 CHF</option>
-            <option value="240">240 GB - 120 CHF</option>
-            <option value="500">500 GB - 250 CHF</option>
-            <option value="1000">1000 GB - 500 CHF</option>
-        </select>
-        
-        <input type="submit" value="Bestellen">
-    </form> 
+    <label for="KundeName">Geben Sie Ihren Namen ein</label>
+    <input type="text" name="KundeName">
+    <div class="form-group">
+        <div>
+            <label for="cpu">CPU (Cores): </label>
+            <select id="cpu" name="cpu">
+                <option value="1">1 Core - 5 CHF</option>
+                <option value="2">2 Cores - 10 CHF</option>
+                <option value="4">4 Cores - 18 CHF</option>
+                <option value="8">8 Cores - 30 CHF</option>
+                <option value="16">16 Cores - 45 CHF</option>
+            </select>
+        </div>
+        <div>
+            <label for="ram">RAM (MB):</label>
+            <select id="ram" name="ram">
+                <option value="512">512 MB - 5 CHF</option>
+                <option value="1024">1024 MB - 10 CHF</option>
+                <option value="2048">2048 MB - 20 CHF</option>
+                <option value="4096">4096 MB - 40 CHF</option>
+                <option value="8192">8192 MB - 80 CHF</option>
+                <option value="16384">16384 MB - 160 CHF</option>
+                <option value="32768">32768 MB - 320 CHF</option>
+                <option value="65536">65536 MB - 640 CHF</option>
+                <option value="131072">131072 MB - 1280 CHF</option>
+            </select>
+        </div>
+        <div>
+            <label for="ssd">SSD (GB):</label>
+            <select id="ssd" name="ssd">
+                <option value="10">10 GB - 5 CHF</option>
+                <option value="20">20 GB - 10 CHF</option>
+                <option value="40">40 GB - 20 CHF</option>
+                <option value="80">80 GB - 40 CHF</option>
+                <option value="240">240 GB - 120 CHF</option>
+                <option value="500">500 GB - 250 CHF</option>
+                <option value="1000">1000 GB - 500 CHF</option>
+                <option value="4000">4000 GB - 2000 CHF</option>
+                <option value="8000">8000 GB - 4000 CHF</option>
+                <option value="16000">16000 GB - 8000 CHF</option>
+            </select>
+        </div>
+    </div>
+    <input type="submit" value="Bestellen">
+</form>
 
-
-  
-
-    
 </body>
 </html>
