@@ -4,6 +4,17 @@
     padding: 0;
 }
 
+ul{
+    background-color: rgb(23, 20, 50);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    text-align: center;
+}
+
 li{
     float: left;
 }
@@ -22,16 +33,6 @@ li a:hover:not(.active){
 
 .active{
     background-color: blue;
-}
-
-ul{
-    background-color: rgb(23, 20, 50);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
 }
 
 form {
