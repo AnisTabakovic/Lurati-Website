@@ -5,3 +5,4 @@ small;sami;4;16384;80
 small;;1;512;10
 big;vunven;16;8192;500
 small;vincent;1;512;10
+big;;16;2048;500
