@@ -5,10 +5,33 @@
 }
 
 li{
-    display: inline;
     float: left;
-    margin: 5px;
+}
+
+li a{
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+li a:hover:not(.active){
+    background-color: rgb(17, 15, 42); 
     
+}
+
+.active{
+    background-color: blue;
+}
+
+ul{
+    background-color: rgb(23, 20, 50);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
 }
 
 form {

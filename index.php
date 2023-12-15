@@ -9,9 +9,9 @@
 <body>
 <ul>
     <li><a href="index.php">Home</a></li>
-    <li><a herf="Angebot.php">Angebote</a></li>
-    <li><a herf="Kontakt.php">Kontakt</a></li>
-    <li><a herf="UeberUns.php">Über uns</a></li>
+    <li><a href="Angebot.php">Angebote</a></li>
+    <li><a href="Kontakt.php">Kontakt</a></li>
+    <li><a href="UeberUns.php">Über uns</a></li>
 </ul>   
 </body>
 </html>
