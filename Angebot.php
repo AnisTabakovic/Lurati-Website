@@ -11,13 +11,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<ul>
-<li>
-    <a href="index.php">Home</a></li>
-    <li><a href="Angebot.php">Angebote</a></li>
-    <li><a href="Kontakt.php">Kontakt</a></li>
-    <li><a href="UeberUns.php">Über uns</a></li>
-</ul>
+<nav class = "navMenu">
+
+    <a href="index.php">Home</a>
+    <a href="Angebot.php">Angebote</a>
+    <a href="Kontakt.php">Kontakt</a>
+    <a href="UeberUns.php">Über uns</a>
+    </nav>
 <?php
 
 $SmallServer = [
@@ -51,7 +51,7 @@ file_put_contents($file,$AllgemeinServerleistung);
                         $selectedRam = intval($_POST['ram']);
                         $selectedSsd = intval($_POST['ssd']);
                         $KundeName = $_POST["KundeName"];
-                        $KundeDelte = $_POST["Delete"];
+
 
             $smallServerCpu = $SmallServer["Cores"];
             $smallServerRam = $SmallServer["Ram"];
@@ -91,22 +91,26 @@ file_put_contents($file,$AllgemeinServerleistung);
                     echo "No server can accommodate your selection.";
                     break;
             }
-
-         //Liest die Datei in ein Array
-         $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
-
-         // Durchläuft jede Zeile im Array
-         foreach ($arrayamk as $key => $line) {
-         // Überprüft, ob die Zeile "vinc" enthält
-         if (strpos($line, $KundeDelte) !== false) {
-         // Entfernt die Zeile aus dem Array
-         unset($arrayamk[$key]);
-         }
-         }
-         
-         // Schreibt das modifizierte Array zurück in die Datei
-         file_put_contents("Kunden.txt", implode("\n", $arrayamk));
     } 
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $KundeDelte = $_POST["Delete"];
+
+        //Liest die Datei in ein Array
+        $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
+
+        // Durchläuft jede Zeile im Array
+        foreach ($arrayamk as $key => $line) {
+        // Überprüft, ob die Zeile den Namen enthält
+        if (strpos($line, $KundeDelte) !== false) {
+        // Entfernt die Zeile aus dem Array
+        unset($arrayamk[$key]);
+        }
+        }
+        $KundeDelte = $_POST["Delete"];
+        // Schreibt das modifizierte Array zurück in die Datei
+        file_put_contents("Kunden.txt", implode($arrayamk));
+    }
 ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
@@ -143,7 +147,9 @@ file_put_contents($file,$AllgemeinServerleistung);
             <option value="500">500 GB - 250 CHF</option>
             <option value="1000">1000 GB - 500 CHF</option>
         </select> 
-        <input type="submit" value="Bestellen" >    
+        <input type="submit" value="Bestellen" > 
+    </form>  
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">     
     <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
         <input type="text" value="Name eingeben" id="Delete" name="Delete">
 

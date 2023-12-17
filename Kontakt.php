@@ -10,11 +10,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<ul>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="Angebot.php">Angebote</a></li>
-    <li><a href="Kontakt.php">Kontakt</a></li>
-    <li><a href="UeberUns.php">Über uns</a></li>
-</ul>   
+<nav class = "navMenu">
+
+    <a href="index.php">Home</a>
+    <a href="Angebot.php">Angebote</a>
+    <a href="Kontakt.php">Kontakt</a>
+    <a href="UeberUns.php">Über uns</a>
+    </nav>   
 </body>
 </html>
