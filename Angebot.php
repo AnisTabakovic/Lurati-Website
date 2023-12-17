@@ -107,8 +107,8 @@ file_put_contents($file,$AllgemeinServerleistung);
          // Schreibt das modifizierte Array zurück in die Datei
         
          $file = fopen("kunden.txt", "a");
-         fwrite($file,$all);
-         file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
+         fwrite($file,$arrayamk);
+         fclose($file);
     } 
 ?>
 
