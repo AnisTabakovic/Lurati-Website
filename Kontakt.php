@@ -10,12 +10,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<nav class = "navMenu">
+<header class = "header">
+<!-- Logo -->
+<a href="index.php" class="logo ">OmniCloud</a>
+<!-- Navigation -->
+    <nav class = "navMenu">
 
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
     <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
-    </nav>   
+    <a href="BenutzerDelete.php">Angebot Aufheben</a>
+    </nav>
+    </header>  
 </body>
 </html>

@@ -11,21 +11,24 @@
 </head>
 <body>
 
-<header class = "header"
-<a href="#" class="logo ">logo</a>
+<header class = "header">
+<!-- Logo --> 
+<a href="index.php" class="logo ">OmniCloud</a>
+<!-- Navigation -->
     <nav class = "navMenu">
 
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
     <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
+    <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
     </header>
 
-    <div class=  "hintergrund">
-<h1>OmniCloud</h1>
+    <div class= "hintergrund">
 </div>
- 
-
+<div>
+    <p>Wir von Omni Cloud bieten bahnbrechende und innovative Cloud Dienste an. Seit Jahrzehnten gehören wir zur Spitze was Cloud Dienste angeht.</p>
+</div>
 </body>
 </html>

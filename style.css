@@ -1,4 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/*Standart Abstände etc. zurücksetzten*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+/*Form */
 form {
     width: 300px;
     margin: 0 auto;
@@ -19,7 +27,7 @@ input[type="submit"] {
     width: 100%;
     height: 30px;
 }
-
+/*Sonstige Website Designe*/
 .hintergrund{
     width: 100%;
     height: 100vh;
@@ -28,13 +36,6 @@ input[type="submit"] {
     background-size: cover;
     background-position: center center;
     position: relative;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace; 
 }
 
 body{
@@ -57,14 +58,15 @@ body{
   align-items: center;
   z-index: 100;
 }
-
+/*Designe Logo*/
 .logo{
   font-size: 32px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
+  
 }
-
+/*Designe Navigation */
 .navMenu a{
   position: relative;
   font-size: 18px;
@@ -87,11 +89,12 @@ body{
 }
 
 .navMenu a:hover::before{
-  top: 0;
-  transition: 0.5s;
+  transition: .3s;
   width: 100%; 
 }
 
-  
-  
+.form-class-name {
+  margin-top: 100px; /* Ersetzen Sie 100px durch die tatsächliche Höhe Ihrer Navigation */
+}
+
   

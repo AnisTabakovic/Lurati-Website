@@ -10,20 +10,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<nav class = "navMenu">
+<header class = "header">
+<!-- Logo -->
+<a href="index.php" class="logo ">OmniCloud</a>
+<!-- Navigation -->
+    <nav class = "navMenu">
 
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
     <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
-    </nav> 
+    <a href="BenutzerDelete.php">Angebot Aufheben</a>
+    </nav>
+    </header>
 
 <div class="about-section">
   <h1>  Über uns</h1>
   <p>Wir sind 3 Schüler*innen der I2a, welche den Auftrag erhalten haben eine Website aufzusetellen die VMs anbietet.</p>
   <p>Resize the browser window to see that this page is responsive by the way.</p>
 </div>
-
+<!-- Kontakt Info über CEO's -->
 <h2 style="text-align:center">Unser Team</h2>
 <div class="row">
   <div class="column">
