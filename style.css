@@ -22,6 +22,12 @@ select {
     height: 30px;
 }
 
+input[type="text"] {
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+}
+
 input[type="submit"] {
     margin-top: 20px;
     width: 100%;
@@ -76,7 +82,13 @@ body{
   margin-left: 40px;
 
 }
-
+/* 
+  Dieser Block definiert ein Pseudoelement ::before für alle Links in der .navMenu Klasse.
+  Das Pseudoelement hat eine absolute Position und erscheint am unteren Rand des Links (top: 100%).
+  Es erstreckt sich über die volle Breite des Links (width: 100%) und hat eine Höhe von 2px.
+  Die Hintergrundfarbe ist weiß (background: #fff).
+  Bei Änderungen wird eine Übergangsanimation mit einer Dauer von 0.3 Sekunden angewendet (transition: .3s).
+*/
 .navMenu a::before{
   content: '';
   position: absolute;
@@ -87,7 +99,7 @@ body{
   background: #fff;
   transition: .3s;
 }
-
+/* Hover Effekt*/
 .navMenu a:hover::before{
   transition: .3s;
   width: 100%; 
@@ -97,4 +109,20 @@ body{
   margin-top: 100px; /* Ersetzen Sie 100px durch die tatsächliche Höhe Ihrer Navigation */
 }
 
+/* Über Uns Seite */
+.about-section{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.UnserTeam{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.column {
+  display: inline-block;
+  padding-left: 340px;
   
+}

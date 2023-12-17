@@ -27,7 +27,7 @@
 
     <div class= "hintergrund">
 </div>
-<div>
+<div class = "text-homepage">
     <p>Wir von Omni Cloud bieten bahnbrechende und innovative Cloud Dienste an. Seit Jahrzehnten gehören wir zur Spitze was Cloud Dienste angeht.</p>
 </div>
 </body>

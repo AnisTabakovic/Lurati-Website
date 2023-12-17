@@ -71,55 +71,53 @@ elseif ($data[0] == "big") {
 
 }
                         // Request Method
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-                        $selectedCpu = intval($_POST['cpu']);
-                        $selectedRam = intval($_POST['ram']);
-                        $selectedSsd = intval($_POST['ssd']);
-                        $KundeName = $_POST["KundeName"];
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $selectedCpu = intval($_POST['cpu']);
+    $selectedRam = intval($_POST['ram']);
+    $selectedSsd = intval($_POST['ssd']);
+    $KundeName = $_POST["KundeName"];
 
-            
-            $smallServerCpu = $SmallServer["Cores"];
-            $smallServerRam = $SmallServer["Ram"];
-            $smallServerSsd = $SmallServer["SSD"];
-            
-            $mediumServerCpu = $MediumServer["Cores"];
-            $mediumServerRam = $MediumServer["Ram"];
-            $mediumServerSsd = $MediumServer["SSD"];
-            
-            $bigServerCpu = $BigServer["Cores"];
-            $bigServerRam = $BigServer["Ram"];
-            $bigServerSsd = $BigServer["SSD"];
-            
-            //Abfrage wo es Platz hat & erstellung eines neuen Kunden
-            switch (true) {
-                case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
-                    echo "The Small Server can accommodate your selection.";
-                    $server = "small";
-                    $myfile = fopen("kunden.txt", "a");
-                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
-                    fwrite($myfile,$all);
-                    break;
-                case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
-                    echo "The Medium Server can accommodate your selection.";
-                    $server = "medium";
-                    $myfile = fopen("kunden.txt", "a");
-                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
-                    fwrite($myfile,$all);
-                    break;
-                case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
-                    echo "The Big Server can accommodate your selection.";
-                    $server = "big";
-                    $myfile = fopen("kunden.txt", "a");
-                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
-                    fwrite($myfile,$all);
-                    break;
-                default:
-                    echo "No server can accommodate your selection.";
-                    break;
-            }
-    } 
-
+    $smallServerCpu = $SmallServer["Cores"];
+    $smallServerRam = $SmallServer["Ram"];
+    $smallServerSsd = $SmallServer["SSD"];
+    
+    $mediumServerCpu = $MediumServer["Cores"];
+    $mediumServerRam = $MediumServer["Ram"];
+    $mediumServerSsd = $MediumServer["SSD"];
+    
+    $bigServerCpu = $BigServer["Cores"];
+    $bigServerRam = $BigServer["Ram"];
+    $bigServerSsd = $BigServer["SSD"];
+    
+    switch (true) {
+        case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
+            $succesSmall = "Der kleine Server hat Platz.";
+            $server = "small";
+            $myfile = fopen("kunden.txt", "a");
+            $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+            fwrite($myfile,$all);
+            break;
+        case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
+            $succesMedium = "Der mittlere Server hat Platz.";
+            $server = "medium";
+            $myfile = fopen("kunden.txt", "a");
+            $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+            fwrite($myfile,$all);
+            break;
+        case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
+            $succesBig = "Der große Server hat Platz.";
+            $server = "big";
+            $myfile = fopen("kunden.txt", "a");
+            $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+            fwrite($myfile,$all);
+            break;
+        default:
+            echo "Kein Server kann Ihre Auswahl unterbringen. Sie müssen sich gedulden.";
+            break;
+    }
+}
 ?>
+
 
 <!-- Forum zum bestellen der Server spezifikationen -->
 <form class="form-class-name" action="Angebot.php" method="post">  
@@ -156,7 +154,20 @@ elseif ($data[0] == "big") {
         <option value="500">500 GB - 250 CHF</option>
         <option value="1000">1000 GB - 500 CHF</option>
     </select> 
-    <input type="submit" value="Bestellen" > 
+    <input type="submit" value="Bestellen" >
 </form>  
+<div class="server-message">
+    <?php 
+        if (isset($succesSmall)) {
+            echo $succesSmall;
+        } elseif (isset($succesMedium)) {
+            echo $succesMedium;
+        } elseif (isset($succesBig)) {
+            echo $succesBig;
+        } else {
+            echo "No server can accommodate your selection.";
+        }
+    ?>
+</div>
 </body>
 </html>
