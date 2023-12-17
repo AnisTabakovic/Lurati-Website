@@ -34,7 +34,7 @@ input[type="submit"] {
     height: 30px;
 }
 /*Sonstige Website Designe*/
-.hintergrund{
+/*.hintergrund{
     width: 100%;
     height: 100vh;
     background-image: url('wolkenbilld2.png');
@@ -42,15 +42,44 @@ input[type="submit"] {
     background-size: cover;
     background-position: center center;
     position: relative;
-}
+}*/
 
 body{
   min-height: 100vh;
   background: url('wolkenbilld2.png') no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  position: relative;
+  
 
 }
+
+.text-homepage{
+  text-align: center;
+  margin-top: 200px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 100px;
+}
+
+.text-homepage2{
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.text-homepage3{
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 30px;
+}
+
+
 
 .header{
   position: fixed;

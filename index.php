@@ -23,12 +23,17 @@
     <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
     </header>
-
+<!--
     <div class= "hintergrund">
-</div>
+</div>!-->
 <div class = "text-homepage">
-    <p>Wir von Omni Cloud bieten bahnbrechende und innovative Cloud Dienste an. Seit Jahrzehnten gehören wir zur Spitze was Cloud Dienste angeht.</p>
+<p>OMNI CLOUD</p>   
 </div>
+<div class = "text-homepage2">
+<p>Die Cloud für alle</p>
+</div>
+<div class = "text-homepage3">
+<p>Willkommen bei Omni Cloud! Entdecken Sie unsere hochmodernen virtuellen Maschinen – skalierbar und perfekt auf Ihre Bedürfnisse zugeschnitten. Seit Jahren sind wir Experten im Bereich Cloud-Dienste. Vertrauen Sie auf Innovation, Zuverlässigkeit und ein engagiertes Team. Optimieren Sie Ihre Infrastruktur und werden Sie Teil unserer zufriedenen Kunden. Willkommen bei Omni Cloud – Ihrem Partner für erstklassige Cloud-Lösungen!</p>
 
 <div class = "footerContainer">
 </body>
