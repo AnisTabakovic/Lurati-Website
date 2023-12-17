@@ -50,6 +50,7 @@ file_put_contents($file,$AllgemeinServerleistung);
                         $selectedRam = intval($_POST['ram']);
                         $selectedSsd = intval($_POST['ssd']);
                         $KundeName = $_POST["KundeName"];
+                        $KundeDelte = $_POST["Delete"];
 
             $smallServerCpu = $SmallServer["Cores"];
             $smallServerRam = $SmallServer["Ram"];
@@ -94,19 +95,37 @@ file_put_contents($file,$AllgemeinServerleistung);
 
 
 
-   $myfile = fopen("Kunden.txt", "r") or die("Unable to open file!");
+   /*$myfile = fopen("Kunden.txt", "r") or die("Unable to open file!");
         
         $arrayamk = file("Kunden.txt");
 
         print_r($arrayamk);
 
-        $DelteName = "aids";
-        foreach ($arrayamk as $resultat) {
-        
-          }
+        $found = array_search("vinc",$arrayamk);
 
-      //  echo fread($myfile,filesize("Kunden.txt"));
-     // fclose($myfile);
+        
+        if ($found = true) {
+            
+        }
+        else {
+
+        }*/
+
+//Liest die Datei in ein Array
+$arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
+
+// Durchläuft jede Zeile im Array
+foreach ($arrayamk as $key => $line) {
+    // Überprüft, ob die Zeile "vinc" enthält
+    if (strpos($line, $KundeDelte) !== false) {
+        // Entfernt die Zeile aus dem Array
+        unset($arrayamk[$key]);
+    }
+}
+
+// Schreibt das modifizierte Array zurück in die Datei
+file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
+
 
 
 
@@ -163,6 +182,8 @@ file_put_contents($file,$AllgemeinServerleistung);
             <option value="500">500 GB - 250 CHF</option>
             <option value="1000">1000 GB - 500 CHF</option>
         </select>
+        <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
+        <input type="text" value="Name eingeben"name="Delete">
         
         <input type="submit" value="Bestellen">
     </form>    
