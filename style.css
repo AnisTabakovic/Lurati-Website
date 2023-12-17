@@ -139,10 +139,6 @@ body {
 
 .navMenu {
   position: absolute;
-  top: 100%;
-  left: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .navMenu a {

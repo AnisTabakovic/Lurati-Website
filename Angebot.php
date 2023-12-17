@@ -105,71 +105,13 @@ file_put_contents($file,$AllgemeinServerleistung);
             if (strpos($line, $KundeDelte) !== false) {
             // Entfernt die Zeile aus dem Array
             unset($arrayamk[$key]);
-                            }
+            }
             }
             
             // Schreibt das modifizierte Array zurück in die Datei
             file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
             } 
-
-
-
-
-   /*$myfile = fopen("Kunden.txt", "r") or die("Unable to open file!");
-        
-        $arrayamk = file("Kunden.txt");
-
-        print_r($arrayamk);
-
-        $found = array_search("vinc",$arrayamk);
-
-        
-        if ($found = true) {
-            
-        }
-        else {
-
-        }*/
-
-//Liest die Datei in ein Array
-$arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
-
-// Durchläuft jede Zeile im Array
-foreach ($arrayamk as $key => $line) {
-    // Überprüft, ob die Zeile "vinc" enthält
-    if (strpos($line, $KundeDelte) !== false) {
-        // Entfernt die Zeile aus dem Array
-        unset($arrayamk[$key]);
-    }
-}
-
-// Schreibt das modifizierte Array zurück in die Datei
-file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ?>
+       ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
         <label for="KundeName">Geben Sie Ihren Namen ein</label>
@@ -206,7 +148,7 @@ file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
     </form>    
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
-        <input type="text" value="Name eingeben"name="Delete">
+        <input type="text" value="Name eingeben" id="Delete" name="Delete">
 
         <input type="submit" value="Löschen">
     </form>
