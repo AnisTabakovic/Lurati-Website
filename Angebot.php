@@ -22,6 +22,10 @@
     <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
     </header>
+    <div>
+    <h1 class="Angebot">Unser Angebot</h1>
+    <p class="AngebotText">Sie haben Interesse an einer virtuellen Maschine? Dann sind Sie hier genau richtig. <br>Wir bieten Ihnen eine grosse Auswahl an verschiedenen Spezifikationen. 
+        Der Auswahl ist keine Grenze gesetzt. <br>Melden Sie sich gerne im untenstehenden Formular an!  </p>
 
 <?php
 $totalPrice = 0;
@@ -59,7 +63,7 @@ foreach ($salesLines as $line) {
     }
 }
 
-echo "Der Gesamtumsatz beträgt: " . $totalSales . " CHF";
+/* */
 
 //Direkt am Anfang wird die verfügbare Serverkapazität ausgerechnet
 $file = file("Kunden.txt");
@@ -201,8 +205,8 @@ elseif ($data[0] == "big") {
 
 <!-- Forum zum bestellen der Server spezifikationen -->
 <form class="form-class-name" action="Angebot.php" method="post">  
-    <label for="KundeName">Geben Sie Ihren Namen ein</label>
-    <input type="text" name="KundeName">
+    <label for="KundeName">Geben Sie Ihren Namen ein:</label>
+    <input type="text" name="KundeName" placeholder = "Ihr Name...">
     <label for="cpu">CPU (Cores): </label>
     <select id="cpu" name="cpu">
         <option value="">Wie viele Cores möchten Sie</option>
@@ -237,9 +241,8 @@ elseif ($data[0] == "big") {
     <input type="submit" value="Bestellen" >
 </form>  
 
-<p class="gesamtpreis">Der Gesmantpreis beträgt: <?php echo $totalPrice;?></p>
+<p class="gesamtpreis">Der Gesamtpreis beträgt: <?php echo $totalPrice;?> CHF .- /Monat </p>
 <footer> 
-
 <div class="footer">
   <div>
   <a href="Angebote.php">Angebote</a>
@@ -247,9 +250,9 @@ elseif ($data[0] == "big") {
   <a href="UeberUns.php">   Über uns</a>
 </div>
 <p>© 2023 OmniCloud GmbH</p>
-
 </div>
-
 </footer>
+
 </body>
+
 </html>

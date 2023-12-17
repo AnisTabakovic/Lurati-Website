@@ -27,7 +27,7 @@
     <div class= "hintergrund">
 </div>!-->
 <div class = "text-homepage">
-<p>OMNI CLOUD</p>   
+<p>OmniCloud</p>   
 </div>
 <div class = "text-homepage2">
 <p>Die Cloud für alle</p>

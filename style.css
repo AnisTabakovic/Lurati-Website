@@ -10,28 +10,42 @@
 form {
     width: 300px;
     margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    
+
 }
 
 label {
     display: block;
     margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    
 }
 
 select {
     width: 100%;
     height: 30px;
+    margin-top: 20px;
+    
 }
 
 input[type="text"] {
     margin-top: 20px;
     width: 100%;
     height: 30px;
+    
+   
 }
 
 input[type="submit"] {
     margin-top: 20px;
     width: 100%;
     height: 30px;
+    
 }
 /*Sonstige Website Designe*/
 /*.hintergrund{
@@ -45,7 +59,7 @@ input[type="submit"] {
 }*/
 
 body{
-  min-height: 100vh;
+  min-height: 110vh;
   background: url('wolkenbilld2.png') no-repeat;
   background-size: cover;
   background-position: center center;
@@ -160,16 +174,8 @@ body{
   margin-top: 150px;
 }
 
-/*Angebot Seite */
-.gesamtpreis {
-  text-align: center;
-  margin-top: 20px;
-}
-.serverfull-message {
-  color: red;
-  font-weight: bold;
-  text-align: center;
-}
+
+
 
 .footer{
   position: absolute;
@@ -178,8 +184,8 @@ body{
   right: 0;
   clear: both;
   width: 100%;
-  padding: 20px 100px;
-  background-color:#204c77;
+  padding: 15px 100px;
+  background-color:#487faf;
   justify-content: space-between ;
   align-items: center;
   z-index: 100;
@@ -199,7 +205,28 @@ body{
   margin-left: 40px;
 }
 
+.gesamtpreis {
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
 
+.Angebot{
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 5%;
+}
+
+.AngebotText{
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 5px;
+  
+}
 
 
 
