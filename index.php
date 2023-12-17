@@ -26,6 +26,7 @@
 <!--
     <div class= "hintergrund">
 </div>!-->
+<div>
 <div class = "text-homepage">
 <p>OmniCloud</p>   
 </div>
@@ -34,6 +35,7 @@
 </div>
 <div class = "text-homepage3">
 <p>Willkommen bei Omni Cloud! Entdecken Sie unsere hochmodernen virtuellen Maschinen – skalierbar und perfekt auf Ihre Bedürfnisse zugeschnitten. Seit Jahren sind wir Experten im Bereich Cloud-Dienste. Vertrauen Sie auf Innovation, Zuverlässigkeit und ein engagiertes Team. Optimieren Sie Ihre Infrastruktur und werden Sie Teil unserer zufriedenen Kunden. Willkommen bei Omni Cloud – Ihrem Partner für erstklassige Cloud-Lösungen!</p>
+</div>
 </div>
 <footer> 
 

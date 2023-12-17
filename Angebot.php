@@ -24,7 +24,7 @@
     </header>
     <div>
     <h1 class="Angebot">Unser Angebot</h1>
-    <p class="AngebotText">Sie haben Interesse an einer virtuellen Maschine? Dann sind Sie hier genau richtig. <br>Wir bieten Ihnen eine grosse Auswahl an verschiedenen Spezifikationen. 
+    <p class="AngebotText">Sie haben Interesse an einer virtuellen Maschine? Dann sind Sie hier genau richtig. Wir bieten Ihnen eine grosse Auswahl an verschiedenen Spezifikationen. 
         Der Auswahl ist keine Grenze gesetzt. <br>Melden Sie sich gerne im untenstehenden Formular an!  </p>
 
 <?php
@@ -242,7 +242,10 @@ elseif ($data[0] == "big") {
 </form>  
 
 <p class="gesamtpreis">Der Gesamtpreis beträgt: <?php echo $totalPrice;?> CHF .- /Monat </p>
+
+
 <footer> 
+
 <div class="footer">
   <div>
   <a href="Angebote.php">Angebote</a>
@@ -250,9 +253,9 @@ elseif ($data[0] == "big") {
   <a href="UeberUns.php">   Über uns</a>
 </div>
 <p>© 2023 OmniCloud GmbH</p>
+
 </div>
+
 </footer>
-
 </body>
-
 </html>

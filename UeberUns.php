@@ -23,48 +23,24 @@
     </nav>
     </header>
 <!-- Kontakt Info über CEO's -->
-<h1 class="UnserTeam">Unser Team</h1>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2>Anis Tabakovic</h2>
-        <p class="title">CEO</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>anis.tabakoivc@stud.edubs.ch</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2>Vincent Bernardini</h2>
-        <p class="title">CEO</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>vincent.bernardini@stud.edubs.ch</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2>Mirella Damiano</h2>
-        <p class="title">CEO</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mirella.damiano@stud.edubs.ch</p>
-      </div>
-    </div>
-  </div>
-</div> 
-
-<div class="about-section">
-  <h1>  Über uns</h1>
-  <p>Wir sind 3 Schüler*innen der I2a, welche den Auftrag erhalten haben eine Website aufzusetellen die VMs anbietet.</p>
+<div>
+  <h1 class = uberuns>  Über uns</p>
+  <p class = uberunstext>Willkommen auf unserer Website! Wir sind drei Informatikschüler*innen der Mittelschule Basel im zweiten Jahr. Unser Team bietet eine vielfältige Auswahl an sorgfältig konfigurierten virtuellen Maschinen (VMs) an. Durch unsere gemeinsame Leidenschaft für Technologie und IT sind wir bestrebt, Ihnen hochwertige Lösungen zu präsentieren. Entdecken Sie die Welt der VMs mit unserem Team!<br>
+<br>
+Ihre Informatik-Schüler*innen,<br>
+Anis Tabakovic, Vincent Bernardini, Mirella Damiano</p>
 </div>
+<p class = kntform> Bei weiteren Fragen oder Anliegnen können Sie uns gerne kontaktieren.</p>
+<form action="Formular ist nur fürs Aussehen, nicht Funktional" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="problem">Problem:</label><br>
+  <textarea id="problem" name="problem" required></textarea><br>
+  <input type="submit" value="Senden">
+</form>
 <footer> 
-
 <div class="footer">
   <div>
   <a href="Angebote.php">Angebote</a>
@@ -72,9 +48,7 @@
   <a href="UeberUns.php">   Über uns</a>
 </div>
 <p>© 2023 OmniCloud GmbH</p>
-
 </div>
-
 </footer>
 </body>
 </html>

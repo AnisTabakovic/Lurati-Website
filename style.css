@@ -47,16 +47,6 @@ input[type="submit"] {
     height: 30px;
     
 }
-/*Sonstige Website Designe*/
-/*.hintergrund{
-    width: 100%;
-    height: 100vh;
-    background-image: url('wolkenbilld2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-}*/
 
 body{
   min-height: 110vh;
@@ -64,16 +54,19 @@ body{
   background-size: cover;
   background-position: center center;
   position: relative;
-  
+  filter: grayscale(10%);
+  -webkit-filter: grayscale(10%);
 
 }
 
 .text-homepage{
   text-align: center;
-  margin-top: 200px;
   color: #fff;
   font-weight: 700;
   font-size: 100px;
+
+  padding-top: 5%;
+  
 }
 
 .text-homepage2{
@@ -81,6 +74,7 @@ body{
   color: #fff;
   font-weight: 700;
   font-size: 30px;
+  margin-top: 50px;
 }
 
 .text-homepage3{
@@ -153,25 +147,36 @@ body{
 }
 
 /* Über Uns Seite */
-.about-section{
-  text-align: center;;
-}
 
-.UnserTeam{
+.uberuns{
   text-align: center;
-  margin-top: 150px;
+color: #fff;
+font-weight: bold;
+padding-top: 5%;
 }
 
-.column {
-  display: inline-block;
-  padding-left: 340px;
+.uberunstext{
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 5px;
+  font-size: 20px;
+  
+}
+.kntform{
+  text-align: center;
+  color: #fff;
+  font-size: 15px; 
+  padding-top: 3%;
 }
 
 /*Benutzer Delete Seite*/
-
 .abschied {
   text-align: center;
-  margin-top: 150px;
+  padding-top: 150px;
+  color: #fff;
 }
 
 
@@ -222,12 +227,12 @@ body{
   text-align: center;
   color: #fff;
   font-weight: 500;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 5px;
+  font-size: 20px;
   
 }
-
 
 
  

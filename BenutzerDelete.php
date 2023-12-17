@@ -51,6 +51,7 @@
     }
 
 ?>
+<div>
 <div class="abschied">
 <h1>Möchten Sie uns wirklich verlassen?</h1>
 <p>Falls Sie unzufrienden mit unserem Angebot sind werden wir Ihnen Umgehend helfen.</p>
