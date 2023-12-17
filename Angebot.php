@@ -50,7 +50,8 @@ file_put_contents($file,$AllgemeinServerleistung);
                         $selectedCpu = intval($_POST['cpu']);
                         $selectedRam = intval($_POST['ram']);
                         $selectedSsd = intval($_POST['ssd']);
-                        $KundeName = $_POST["KundeName"];;
+                        $KundeName = $_POST["KundeName"];
+                        $KundeDelte = $_POST["Delete"];
 
             $smallServerCpu = $SmallServer["Cores"];
             $smallServerRam = $SmallServer["Ram"];
@@ -91,33 +92,32 @@ file_put_contents($file,$AllgemeinServerleistung);
                     break;
             }
 
-        } 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {                        
-            $KundeDelte = $_POST["Delete"];
-            
+         //Liest die Datei in ein Array
+         $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
 
-            //Liest die Datei in ein Array
-            $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
-
-            // Durchläuft jede Zeile im Array
-            foreach ($arrayamk as $key => $line) {
-            // Überprüft, ob die Zeile "vinc" enthält
-            if (strpos($line, $KundeDelte) !== false) {
-            // Entfernt die Zeile aus dem Array
-            unset($arrayamk[$key]);
-            }
-            }
-            
-            // Schreibt das modifizierte Array zurück in die Datei
-            file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
-            } 
-       ?>
+         // Durchläuft jede Zeile im Array
+         foreach ($arrayamk as $key => $line) {
+         // Überprüft, ob die Zeile "vinc" enthält
+         if (strpos($line, $KundeDelte) !== false) {
+         // Entfernt die Zeile aus dem Array
+         unset($arrayamk[$key]);
+         }
+         }
+         
+         // Schreibt das modifizierte Array zurück in die Datei
+        
+         $file = fopen("kunden.txt", "a");
+         fwrite($file,$all);
+         file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
+    } 
+?>
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
         <label for="KundeName">Geben Sie Ihren Namen ein</label>
         <input type="text" name="KundeName">
         <label for="cpu">CPU (Cores): </label>
         <select id="cpu" name="cpu">
+            <option value=""></option>
             <option value="1">1 Core - 5 CHF</option>
             <option value="2">2 Cores - 10 CHF</option>
             <option value="4">4 Cores - 18 CHF</option>
@@ -126,6 +126,7 @@ file_put_contents($file,$AllgemeinServerleistung);
         </select>
         <label for="ram">RAM (MB):</label>
         <select id="ram" name="ram">
+            <option value=""></option>
             <option value="512">512 MB - 5 CHF</option>
             <option value="1024">1024 MB - 10 CHF</option>
             <option value="2048">2048 MB - 20 CHF</option>
@@ -136,6 +137,7 @@ file_put_contents($file,$AllgemeinServerleistung);
         </select>
         <label for="ssd">SSD (GB):</label>
         <select id="ssd" name="ssd">
+            <option value=""></option>
             <option value="10">10 GB - 5 CHF</option>
             <option value="20">20 GB - 10 CHF</option>
             <option value="40">40 GB - 20 CHF</option>
@@ -144,9 +146,7 @@ file_put_contents($file,$AllgemeinServerleistung);
             <option value="500">500 GB - 250 CHF</option>
             <option value="1000">1000 GB - 500 CHF</option>
         </select> 
-        <input type="submit" value="Bestellen" >
-    </form>    
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <input type="submit" value="Bestellen" >    
     <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
         <input type="text" value="Name eingeben" id="Delete" name="Delete">
 
