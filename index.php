@@ -10,6 +10,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
+<style>
+p {
+  background-image: url('C:/xampp/htdocs/Info/Lurati-Website/wolkenbild.png');
+}
+</style>
     <nav class = "navMenu">
 
     <a href="index.php">Home</a>
