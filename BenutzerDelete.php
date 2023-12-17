@@ -65,5 +65,18 @@
         <input type="submit" value="Löschen">
     </form>
 </div>
+<footer> 
+
+<div class="footer">
+  <div>
+  <a href="Angebote.php">Angebote</a>
+  <a href="BenutzerDelete.php">Angebote Aufheben</a>
+  <a href="UeberUns.php">   Über uns</a>
+</div>
+<p>© 2023 OmniCloud GmbH</p>
+
+</div>
+
+</footer>
 </body>
 </html>

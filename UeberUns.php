@@ -63,6 +63,18 @@
   <h1>  Über uns</h1>
   <p>Wir sind 3 Schüler*innen der I2a, welche den Auftrag erhalten haben eine Website aufzusetellen die VMs anbietet.</p>
 </div>
+<footer> 
 
+<div class="footer">
+  <div>
+  <a href="Angebote.php">Angebote</a>
+  <a href="BenutzerDelete.php">Angebote Aufheben</a>
+  <a href="UeberUns.php">   Über uns</a>
+</div>
+<p>© 2023 OmniCloud GmbH</p>
+
+</div>
+
+</footer>
 </body>
 </html>

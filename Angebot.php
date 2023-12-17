@@ -238,5 +238,18 @@ elseif ($data[0] == "big") {
 </form>  
 
 <p class="gesamtpreis">Der Gesmantpreis beträgt: <?php echo $totalPrice;?></p>
+<footer> 
+
+<div class="footer">
+  <div>
+  <a href="Angebote.php">Angebote</a>
+  <a href="BenutzerDelete.php">Angebote Aufheben</a>
+  <a href="UeberUns.php">   Über uns</a>
+</div>
+<p>© 2023 OmniCloud GmbH</p>
+
+</div>
+
+</footer>
 </body>
 </html>

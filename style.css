@@ -170,3 +170,37 @@ body{
   font-weight: bold;
   text-align: center;
 }
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clear: both;
+  width: 100%;
+  padding: 20px 100px;
+  background-color:#204c77;
+  justify-content: space-between ;
+  align-items: center;
+  z-index: 100;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  height: 100px;
+  
+}
+
+
+.footer a{
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+
+
+
+
+ 
