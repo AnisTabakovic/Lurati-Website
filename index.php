@@ -11,7 +11,8 @@
 </head>
 <body>
 
-
+<header class = "header"
+<a href="#" class="logo ">logo</a>
     <nav class = "navMenu">
 
     <a href="index.php">Home</a>
@@ -19,6 +20,7 @@
     <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
     </nav>
+    </header>
 
     <div class=  "hintergrund">
 <h1>OmniCloud</h1>

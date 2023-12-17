@@ -1,10 +1,3 @@
-*,body,html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-}
-
 
 form {
     width: 300px;
@@ -30,15 +23,74 @@ input[type="submit"] {
 .hintergrund{
     width: 100%;
     height: 100vh;
-    background-image: url('wolkenbild.png');
+    background-image: url('wolkenbilld2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
 }
 
-  
- 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+body{
+  min-height: 100vh;
+  background: url('wolkenbilld2.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo{
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navMenu a{
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+
+}
+
+.navMenu a::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: .3s;
+}
+
+.navMenu a:hover::before{
+  top: 0;
+  transition: 0.5s;
+  width: 100%; 
+}
 
   
   

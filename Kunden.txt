@@ -1,0 +1,7 @@
+
+small;vinc;2;1024;80
+small;anis;1;2048;80
+medium;sami;5;4096;80
+
+small;mirette;1;1024;20
+medium;vinc;1;512;10

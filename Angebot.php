@@ -17,6 +17,7 @@
     <a href="Angebot.php">Angebote</a>
     <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
+    <a href="BenutzerDelete.php">adwadad</a>
     </nav>
 <?php
 
@@ -37,6 +38,33 @@ $BigServer = [
     "Ram"   => 131072,
     "SSD"   => 16000,
 ];
+
+$file = file("Kunden.txt");
+foreach ($file as $line) {
+
+$data = explode(";", $line);
+
+if ($data[0] == "small") {
+    $SmallServer["Cores"] -= $data[2];
+    $SmallServer["Ram"] -= $data[3];
+    $SmallServer["SSD"] -= $data[4];
+}
+
+elseif ($data[0] == "medium") {
+    $MediumServer["Cores"] -= $data[2];
+    $MediumServer["Ram"] -= $data[3];
+    $MediumServer["SSD"] -= $data[4];
+}
+
+elseif ($data[0] == "big") {
+    $BigServer["Cores"] -= $data[2];
+    $BigServer["Ram"] -= $data[3];
+    $BigServer["SSD"] -= $data[4];
+}
+
+
+
+}
 
 $ArraySmall = implode(";",$SmallServer);
 $ArrayMedium = implode(";",$MediumServer);
@@ -93,27 +121,9 @@ file_put_contents($file,$AllgemeinServerleistung);
             }
     } 
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $KundeDelte = $_POST["Delete"];
-
-        //Liest die Datei in ein Array
-        $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
-
-        // Durchläuft jede Zeile im Array
-        foreach ($arrayamk as $key => $line) {
-        // Überprüft, ob die Zeile den Namen enthält
-        if (strpos($line, $KundeDelte) !== false) {
-        // Entfernt die Zeile aus dem Array
-        unset($arrayamk[$key]);
-        }
-        }
-        $KundeDelte = $_POST["Delete"];
-        // Schreibt das modifizierte Array zurück in die Datei
-        file_put_contents("Kunden.txt", implode($arrayamk));
-    }
 ?>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
+<form action="Angebot.php" method="post">  
         <label for="KundeName">Geben Sie Ihren Namen ein</label>
         <input type="text" name="KundeName">
         <label for="cpu">CPU (Cores): </label>
@@ -148,12 +158,8 @@ file_put_contents($file,$AllgemeinServerleistung);
             <option value="1000">1000 GB - 500 CHF</option>
         </select> 
         <input type="submit" value="Bestellen" > 
-    </form>  
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">     
-    <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
-        <input type="text" value="Name eingeben" id="Delete" name="Delete">
+    </form> 
+    
 
-        <input type="submit" value="Löschen">
-    </form>
 </body>
 </html>
