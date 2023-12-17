@@ -70,7 +70,6 @@ file_put_contents($file,$AllgemeinServerleistung);
                     $myfile = fopen("kunden.txt", "a");
                     $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
                     fwrite($myfile,$all);
-                    print_r($SmallServer);
                     break;
                 case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
                     echo "The Medium Server can accommodate your selection.";
@@ -78,7 +77,6 @@ file_put_contents($file,$AllgemeinServerleistung);
                     $myfile = fopen("kunden.txt", "a");
                     $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
                     fwrite($myfile,$all);
-                    print_r($SmallServer);
                     break;
                 case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
                     echo "The Big Server can accommodate your selection.";
@@ -86,30 +84,51 @@ file_put_contents($file,$AllgemeinServerleistung);
                     $myfile = fopen("kunden.txt", "a");
                     $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
                     fwrite($myfile,$all);
-                    print_r($SmallServer);
                     break;
                 default:
                     echo "No server can accommodate your selection.";
                     break;
-                }
-            
-
-        
-            $totalPrice = $selectedCpu + $selectedRam + $selectedSsd;
-
+            }
         }
 
 
 
-        $myfile = fopen("Kunden.txt", "r") or die("Unable to open file!");
-        echo fread($myfile,filesize("Kunden.txt"));
-        fclose($myfile);
 
+   $myfile = fopen("Kunden.txt", "r") or die("Unable to open file!");
         
+        $arrayamk = file("Kunden.txt");
+
+        print_r($arrayamk);
+
+        $DelteName = "aids";
+        foreach ($arrayamk as $resultat) {
         
-        
-        
-         
+          }
+
+      //  echo fread($myfile,filesize("Kunden.txt"));
+     // fclose($myfile);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         ?>
 
@@ -146,11 +165,6 @@ file_put_contents($file,$AllgemeinServerleistung);
         </select>
         
         <input type="submit" value="Bestellen">
-    </form> 
-
-
-  
-
-    
+    </form>    
 </body>
 </html>
