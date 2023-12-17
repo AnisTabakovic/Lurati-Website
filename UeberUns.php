@@ -18,13 +18,12 @@
 
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
-    <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
     <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
     </header>
 <!-- Kontakt Info über CEO's -->
-<h2 class="UnserTeam">Unser Team</h2>
+<h1 class="UnserTeam">Unser Team</h1>
 <div class="row">
   <div class="column">
     <div class="card">
