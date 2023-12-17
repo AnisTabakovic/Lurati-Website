@@ -105,7 +105,7 @@ file_put_contents($file,$AllgemeinServerleistung);
          }
          
          // Schreibt das modifizierte Array zurück in die Datei
-         file_put_contents("Kunden.txt", implode(";\n", $arrayamk));
+         file_put_contents("Kunden.txt", implode("\n", $arrayamk));
     } 
 ?>
 

@@ -11,11 +11,9 @@
 </head>
 <body>
 
-<style>
-p {
-  background-image: url('C:/xampp/htdocs/Info/Lurati-Website/wolkenbild.png');
-}
-</style>
+<div class=  "hero">
+<h1>OmniCloud</h1>
+</div>
     <nav class = "navMenu">
 
     <a href="index.php">Home</a>

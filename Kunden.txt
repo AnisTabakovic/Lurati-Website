@@ -1,0 +1,1 @@
+small;vinc;4;4096;20small;anis;4;2048;80
