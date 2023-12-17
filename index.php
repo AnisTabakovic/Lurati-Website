@@ -11,9 +11,7 @@
 </head>
 <body>
 
-<div class=  "hero">
-<h1>OmniCloud</h1>
-</div>
+
     <nav class = "navMenu">
 
     <a href="index.php">Home</a>
@@ -21,6 +19,10 @@
     <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
     </nav>
+
+    <div class=  "hintergrund">
+<h1>OmniCloud</h1>
+</div>
  
 
 </body>
