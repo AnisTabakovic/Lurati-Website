@@ -45,12 +45,12 @@ $file="serverleistung.txt";
 $AllgemeinServerleistung = "Small".";". $ArraySmall . "\n" ."Medium". ";" . $ArrayMedium . "\n" . "Big". ";" . $ArrayBig . "\n";
 file_put_contents($file,$AllgemeinServerleistung);
 
+
                 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
                         $selectedCpu = intval($_POST['cpu']);
                         $selectedRam = intval($_POST['ram']);
                         $selectedSsd = intval($_POST['ssd']);
-                        $KundeName = $_POST["KundeName"];
-                        $KundeDelte = $_POST["Delete"];
+                        $KundeName = $_POST["KundeName"];;
 
             $smallServerCpu = $SmallServer["Cores"];
             $smallServerRam = $SmallServer["Ram"];
@@ -90,7 +90,27 @@ file_put_contents($file,$AllgemeinServerleistung);
                     echo "No server can accommodate your selection.";
                     break;
             }
-        }
+
+        } 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {                        
+            $KundeDelte = $_POST["Delete"];
+            
+
+            //Liest die Datei in ein Array
+            $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
+
+            // Durchläuft jede Zeile im Array
+            foreach ($arrayamk as $key => $line) {
+            // Überprüft, ob die Zeile "vinc" enthält
+            if (strpos($line, $KundeDelte) !== false) {
+            // Entfernt die Zeile aus dem Array
+            unset($arrayamk[$key]);
+                            }
+            }
+            
+            // Schreibt das modifizierte Array zurück in die Datei
+            file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
+            } 
 
 
 
@@ -181,11 +201,14 @@ file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
             <option value="240">240 GB - 120 CHF</option>
             <option value="500">500 GB - 250 CHF</option>
             <option value="1000">1000 GB - 500 CHF</option>
-        </select>
-        <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
-        <input type="text" value="Name eingeben"name="Delete">
-        
-        <input type="submit" value="Bestellen">
+        </select> 
+        <input type="submit" value="Bestellen" >
     </form>    
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
+        <input type="text" value="Name eingeben"name="Delete">
+
+        <input type="submit" value="Löschen">
+    </form>
 </body>
 </html>
