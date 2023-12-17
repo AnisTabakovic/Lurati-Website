@@ -1,2 +1,2 @@
-small;;0;0;0
-small;vinc;4;512;20small;vinc;2;4096;20
+
+small;;2;2048;40small;vinc;4;2048;20
