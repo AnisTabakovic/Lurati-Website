@@ -32,7 +32,7 @@
         <h2>Anis Tabakovic</h2>
         <p class="title">CEO</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>anistabakoivc@stud.edubs.ch</p>
+        <p>anis.tabakoivc@stud.edubs.ch</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -45,7 +45,7 @@
         <h2>Vincent Bernardini</h2>
         <p class="title">CEO</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>vincentbernardini@stud.edubs.ch</p>
+        <p>vincent.bernardini@stud.edubs.ch</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -58,7 +58,7 @@
         <h2>Mirella Damiano</h2>
         <p class="title">CEO</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mirelladamiano@stud.edubs.ch</p>
+        <p>mirella.damiano@stud.edubs.ch</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>

@@ -1,1 +1,43 @@
-small;1;512;10small;1;512;10medium;8;16384;500
+            switch (true) {
+                case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
+                    echo "The Small Server can accommodate your selection.";
+                    $smallServerCpu -= $selectedCpu;
+                    $smallServerRam -= $selectedRam;
+                    $smallServerSsd -= $selectedSsd;
+                    $server = "small";
+                    $myfile = fopen("kunden.txt", "a");
+                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+                    fwrite($myfile,$all);
+                    print_r($SmallServer);
+                    break;
+                case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
+                    echo "The Medium Server can accommodate your selection.";
+                    $mediumServerCpu -= $selectedCpu;
+                    $mediumServerRam -= $selectedRam;
+                    $mediumServerSsd -= $selectedSsd;
+                    $server = "medium";
+                    $myfile = fopen("kunden.txt", "a");
+                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+                    fwrite($myfile,$all);
+                    break;
+                case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
+                    echo "The Big Server can accommodate your selection.";
+                    $bigServerCpu -= $selectedCpu;
+                    $bigServerRam -= $selectedRam;
+                    $bigServerSsd -= $selectedSsd;
+                    $server = "big";
+                    $myfile = fopen("kunden.txt", "a");
+                    $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
+                    fwrite($myfile,$all);
+                    break;
+                default:
+                    echo "No server can accommodate your selection.";
+                    break;
+            }
+
+
+                    $file = file_get_contents("Kunden.txt");
+        $alles = explode(";",$file);
+        $kunden = $alles[0];
+
+        print_r($kunden);

@@ -66,9 +66,6 @@ file_put_contents($file,$AllgemeinServerleistung);
             switch (true) {
                 case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
                     echo "The Small Server can accommodate your selection.";
-                    $smallServerCpu -= $selectedCpu;
-                    $smallServerRam -= $selectedRam;
-                    $smallServerSsd -= $selectedSsd;
                     $server = "small";
                     $myfile = fopen("kunden.txt", "a");
                     $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
@@ -77,41 +74,39 @@ file_put_contents($file,$AllgemeinServerleistung);
                     break;
                 case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
                     echo "The Medium Server can accommodate your selection.";
-                    $mediumServerCpu -= $selectedCpu;
-                    $mediumServerRam -= $selectedRam;
-                    $mediumServerSsd -= $selectedSsd;
                     $server = "medium";
                     $myfile = fopen("kunden.txt", "a");
                     $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
                     fwrite($myfile,$all);
+                    print_r($SmallServer);
                     break;
                 case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
                     echo "The Big Server can accommodate your selection.";
-                    $bigServerCpu -= $selectedCpu;
-                    $bigServerRam -= $selectedRam;
-                    $bigServerSsd -= $selectedSsd;
                     $server = "big";
                     $myfile = fopen("kunden.txt", "a");
                     $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
                     fwrite($myfile,$all);
+                    print_r($SmallServer);
                     break;
                 default:
                     echo "No server can accommodate your selection.";
                     break;
-            }
+                }
             
-            echo $smallServerCpu;
-            echo $smallServerRam;
-            echo $smallServerSsd;
+
         
             $totalPrice = $selectedCpu + $selectedRam + $selectedSsd;
 
         }
 
-        $daten = file_get_contents("serverleistung.txt");
-        $alles = explode(";",$daten);
-        $server = $alles[0];
 
+
+        $myfile = fopen("Kunden.txt", "r") or die("Unable to open file!");
+        echo fread($myfile,filesize("Kunden.txt"));
+        fclose($myfile);
+
+        
+        
         
         
          
