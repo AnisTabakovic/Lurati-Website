@@ -19,7 +19,6 @@
 
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
-    <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
     <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
@@ -30,5 +29,7 @@
 <div class = "text-homepage">
     <p>Wir von Omni Cloud bieten bahnbrechende und innovative Cloud Dienste an. Seit Jahrzehnten gehören wir zur Spitze was Cloud Dienste angeht.</p>
 </div>
+
+<div class = "footerContainer">
 </body>
 </html>

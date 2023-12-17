@@ -1,3 +1,6 @@
+small;name;0;0;0
+small;vinc;1;512;10
+big;anis;16;32768;1000
 small;;0;0;0
 big;Anis;16;32768;1000
 small;vincent;1;512;10

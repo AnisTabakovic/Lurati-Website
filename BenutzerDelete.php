@@ -18,7 +18,6 @@
 
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
-    <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
     <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
@@ -29,30 +28,44 @@
         $KundeDelte = $_POST["Delete"];
         
         //Kunden.txt auslesen und zu einem Array machen
-        $arrayamk = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
+        $array = file("Kunden.txt", FILE_IGNORE_NEW_LINES);
+        $arraypreis = file("sales.txt", FILE_IGNORE_NEW_LINES);
         
-        foreach ($arrayamk as $key => $line) {
+        foreach ($array as $key => $line) {
         //Array Loopen und nach Schlüsselwort suchen + Line löschen
         if (strpos($line, $KundeDelte) !== false) {
-        unset($arrayamk[$key]);
+        unset($array[$key]);
+        }
+        }
+        foreach ($arraypreis as $key => $line) {
+        //Array Loopen und nach Schlüsselwort suchen + Line löschen
+        if (strpos($line, $KundeDelte) !== false) {
+        unset($array[$key]);
         }
         }
         //Den Updateten Array wieder in ein File schreiben
-        array_push($arrayamk,"\n");
-        file_put_contents("Kunden.txt", implode(PHP_EOL, $arrayamk));
+        array_push($arraypreis,"\n");
+        file_put_contents("sales.txt", implode(PHP_EOL, $arraypreis));
+        array_push($array,"\n");
+        file_put_contents("Kunden.txt", implode(PHP_EOL, $array));
+        
+        
     }
 
 ?>
-
+<div class="abschied">
 <h1>Möchten Sie uns wirklich verlassen?</h1>
 <p>Falls Sie unzufrienden mit unserem Angebot sind werden wir Ihnen Umgehend helfen.</p>
-<p>Schreiben Sie uns eine E-Mail OmniCloud@kundenservice.ch</p>
+<p>Schreiben Sie uns eine E-Mail: OmniCloud@kundenservice.com</p>
+</div>
 <!-- Form -->
+<div class="abschiedForm">
 <form action="BenutzerDelete.php" method="post">     
-    <label for="Delete">Möchten Sie Ihren Benutzer entfernen?</label>
+    <label for="Delete">Möchten Sie Ihr Abo beenden?</label>
         <input type="text" value="Name eingeben" id="Delete" name="Delete">
 
         <input type="submit" value="Löschen">
     </form>
+</div>
 </body>
 </html>

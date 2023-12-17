@@ -111,18 +111,30 @@ body{
 
 /* Über Uns Seite */
 .about-section{
-  text-align: center;
-  margin-top: 100px;
+  text-align: center;;
 }
 
 .UnserTeam{
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 150px;
 }
 
 .column {
   display: inline-block;
   padding-left: 340px;
   
+}
+
+/*Benutzer Delete Seite*/
+
+.abschied {
+  text-align: center;
+  margin-top: 150px;
+}
+
+/*Angebot Seite */
+
+.gesamtpreis {
+  text-align: center;
+  margin-top: 20px;
 }

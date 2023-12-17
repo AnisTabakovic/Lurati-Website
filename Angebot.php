@@ -18,13 +18,13 @@
     <nav class = "navMenu">
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
-    <a href="Kontakt.php">Kontakt</a>
     <a href="UeberUns.php">Über uns</a>
     <a href="BenutzerDelete.php">Angebot Aufheben</a>
     </nav>
     </header>
 
 <?php
+$totalPrice = 0;
 //Deklarirung der Server
 $SmallServer = [
     "Cores" => 4,
@@ -43,6 +43,21 @@ $BigServer = [
     "Ram"   => 131072,
     "SSD"   => 16000,
 ];
+
+$salesFile = 'sales.txt';
+
+// Verkäufe lesen
+$salesLines = file($salesFile, FILE_IGNORE_NEW_LINES);
+
+// Jede Zeile in einen Namen und einen Preis aufteilen und die Summe der Preise berechnen
+$totalSales = 0;
+foreach ($salesLines as $line) {
+    $parts = explode(';', $line);
+    $price = floatval($parts[1]);
+    $totalSales += $price;
+}
+
+echo "Der Gesamtumsatz beträgt: " . $totalSales . " CHF";
 
 //Direkt am Anfang wird die verfügbare Serverkapazität ausgerechnet
 $file = file("Kunden.txt");
@@ -96,6 +111,7 @@ elseif ($data[0] == "big") {
             $myfile = fopen("kunden.txt", "a");
             $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
             fwrite($myfile,$all);
+            fclose($myfile);
             break;
         case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
             $succesMedium = "Der mittlere Server hat Platz.";
@@ -103,6 +119,7 @@ elseif ($data[0] == "big") {
             $myfile = fopen("kunden.txt", "a");
             $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
             fwrite($myfile,$all);
+            fclose($myfile);
             break;
         case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
             $succesBig = "Der große Server hat Platz.";
@@ -110,12 +127,58 @@ elseif ($data[0] == "big") {
             $myfile = fopen("kunden.txt", "a");
             $all = $server . ";" . $KundeName . ";" . $selectedCpu . ";" . $selectedRam . ";" . $selectedSsd . "\n";
             fwrite($myfile,$all);
+            fclose($myfile);
             break;
         default:
             echo "Kein Server kann Ihre Auswahl unterbringen. Sie müssen sich gedulden.";
             break;
     }
-}
+    // Preise festlegen
+    $cpuPrices = array(
+        "1" => 5,
+        "2" => 10,
+        "4" => 18,
+        "8" => 30,
+        "16" => 45
+    );
+
+    $ramPrices = array(
+        "512" => 5,
+        "1024" => 10,
+        "2048" => 20,
+        "4096" => 40,
+        "8192" => 80,
+        "16384" => 160,
+        "32768" => 320
+    );
+
+    $ssdPrices = array(
+        "10" => 5,
+        "20" => 10,
+        "40" => 20,
+        "80" => 40,
+        "240" => 120,
+        "500" => 250,
+        "1000" => 500
+    );
+
+        // Ausgewählte Werte aus dem Formular holen
+        $selectedCpu = $_POST["cpu"];
+        $selectedRam = $_POST["ram"];
+        $selectedSsd = $_POST["ssd"];
+
+        // Gesamtpreis berechnen
+        $totalPrice = $cpuPrices[$selectedCpu] + $ramPrices[$selectedRam] + $ssdPrices[$selectedSsd];
+        $totalPrice1 = $KundeName . ";" .$totalPrice;
+        $file = 'sales.txt';
+        file_put_contents($file, $totalPrice1 . "\n", FILE_APPEND);
+    }
+    $file = 'sales.txt';
+    $sales = file($file, FILE_IGNORE_NEW_LINES);
+    $totalSales = array_sum($sales);
+
+
+
 ?>
 
 
@@ -156,18 +219,7 @@ elseif ($data[0] == "big") {
     </select> 
     <input type="submit" value="Bestellen" >
 </form>  
-<div class="server-message">
-    <?php 
-        if (isset($succesSmall)) {
-            echo $succesSmall;
-        } elseif (isset($succesMedium)) {
-            echo $succesMedium;
-        } elseif (isset($succesBig)) {
-            echo $succesBig;
-        } else {
-            echo "No server can accommodate your selection.";
-        }
-    ?>
-</div>
+
+<p class="gesamtpreis">Der Gesmantpreis beträgt: <?php echo $totalPrice;?></p>
 </body>
 </html>
