@@ -1,4 +1,1 @@
 name;0
-vinc;15
-anis;865a
-

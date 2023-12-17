@@ -53,8 +53,10 @@ $salesLines = file($salesFile, FILE_IGNORE_NEW_LINES);
 $totalSales = 0;
 foreach ($salesLines as $line) {
     $parts = explode(';', $line);
-    $price = floatval($parts[1]);
-    $totalSales += $price;
+    if (count($parts) >= 2) {
+        $price = floatval($parts[1]);
+        $totalSales += $price;
+    }
 }
 
 echo "Der Gesamtumsatz beträgt: " . $totalSales . " CHF";

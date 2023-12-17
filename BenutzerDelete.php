@@ -40,7 +40,7 @@
         foreach ($arraypreis as $key => $line) {
         //Array Loopen und nach Schlüsselwort suchen + Line löschen
         if (strpos($line, $KundeDelte) !== false) {
-        unset($array[$key]);
+        unset($arraypreis[$key]);
         }
         }
         //Den Updateten Array wieder in ein File schreiben
