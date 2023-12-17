@@ -1,1 +1,4 @@
 small;;0;0;0
+big;Anis;16;32768;1000
+small;vincent;1;512;10
+small;boir;1;512;10
