@@ -48,8 +48,6 @@
         file_put_contents("sales.txt", implode(PHP_EOL, $arraypreis));
         array_push($array,"\n");
         file_put_contents("Kunden.txt", implode(PHP_EOL, $array));
-        
-        
     }
 
 ?>

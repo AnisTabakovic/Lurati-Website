@@ -132,7 +132,7 @@ elseif ($data[0] == "big") {
             fclose($myfile);
             break;
         default:
-            echo "Kein Server kann Ihre Auswahl unterbringen. Sie müssen sich gedulden.";
+            $serverfull = "Kein Server kann Ihre Auswahl unterbringen. Sie müssen sich gedulden.";
             break;
     }
     // Preise festlegen
@@ -164,23 +164,38 @@ elseif ($data[0] == "big") {
         "1000" => 500
     );
 
-        // Ausgewählte Werte aus dem Formular holen
-        $selectedCpu = $_POST["cpu"];
-        $selectedRam = $_POST["ram"];
-        $selectedSsd = $_POST["ssd"];
+    $selectedCpu = $_POST["cpu"];
+    $selectedRam = $_POST["ram"];
+    $selectedSsd = $_POST["ssd"];
 
-        // Gesamtpreis berechnen
-        $totalPrice = $cpuPrices[$selectedCpu] + $ramPrices[$selectedRam] + $ssdPrices[$selectedSsd];
-        $totalPrice1 = $KundeName . ";" .$totalPrice;
-        $file = 'sales.txt';
-        file_put_contents($file, $totalPrice1 . "\n", FILE_APPEND);
+
+    switch (true) {
+        case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
+            $totalPrice = $cpuPrices[$selectedCpu] + $ramPrices[$selectedRam] + $ssdPrices[$selectedSsd];
+            $totalPrice1 = $KundeName . ";" .$totalPrice;
+            $file = 'sales.txt';
+            file_put_contents($file, $totalPrice1 . "\n", FILE_APPEND);
+            break;
+        case ($selectedCpu <= $mediumServerCpu && $selectedRam <= $mediumServerRam && $selectedSsd <= $mediumServerSsd):
+            $totalPrice = $cpuPrices[$selectedCpu] + $ramPrices[$selectedRam] + $ssdPrices[$selectedSsd];
+            $totalPrice1 = $KundeName . ";" .$totalPrice;
+            $file = 'sales.txt';
+            file_put_contents($file, $totalPrice1 . "\n", FILE_APPEND);
+            break;
+        case ($selectedCpu <= $bigServerCpu && $selectedRam <= $bigServerRam && $selectedSsd <= $bigServerSsd):
+            $totalPrice = $cpuPrices[$selectedCpu] + $ramPrices[$selectedRam] + $ssdPrices[$selectedSsd];
+            $totalPrice1 = $KundeName . ";" .$totalPrice;
+            $file = 'sales.txt';
+            file_put_contents($file, $totalPrice1 . "\n", FILE_APPEND);
+            break;
+        default:
+            $serverfull = "Kein Server kann Ihre Auswahl unterbringen. Sie müssen sich gedulden.";
+            break;
     }
     $file = 'sales.txt';
     $sales = file($file, FILE_IGNORE_NEW_LINES);
     $totalSales = array_sum($sales);
-
-
-
+}
 ?>
 
 
