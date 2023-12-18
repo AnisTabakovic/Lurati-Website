@@ -143,7 +143,7 @@ body{
 }
 
 .form-class-name {
-  margin-top: 100px; /* Ersetzen Sie 100px durch die tatsächliche Höhe Ihrer Navigation */
+  margin-top: 10%; /* Ersetzen Sie 100px durch die tatsächliche Höhe Ihrer Navigation */
 }
 
 /* Über Uns Seite */
@@ -213,6 +213,12 @@ padding-top: 5%;
 .gesamtpreis {
   text-align: center;
   color: #fff;
+  font-weight: 500;
+}
+
+.serverfull {
+  text-align: center;
+  color: red;
   font-weight: 500;
 }
 

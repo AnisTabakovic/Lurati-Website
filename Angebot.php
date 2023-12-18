@@ -28,6 +28,7 @@
         Der Auswahl ist keine Grenze gesetzt. <br>Melden Sie sich gerne im untenstehenden Formular an!  </p>
 
 <?php
+$serverfull = "";
 $totalPrice = 0;
 //Deklarirung der Server
 $SmallServer = [
@@ -62,8 +63,6 @@ foreach ($salesLines as $line) {
         $totalSales += $price;
     }
 }
-
-/* */
 
 //Direkt am Anfang wird die verfügbare Serverkapazität ausgerechnet
 $file = file("Kunden.txt");
@@ -109,7 +108,7 @@ elseif ($data[0] == "big") {
     $bigServerCpu = $BigServer["Cores"];
     $bigServerRam = $BigServer["Ram"];
     $bigServerSsd = $BigServer["SSD"];
-    
+    // Schauen in welchem Server man das Angebot unterbringen kann wenn nirgens verfügbar dann gibt es eine Fehlermeldung
     switch (true) {
         case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
             $succesSmall = "Der kleine Server hat Platz.";
@@ -172,7 +171,7 @@ elseif ($data[0] == "big") {
     $selectedRam = $_POST["ram"];
     $selectedSsd = $_POST["ssd"];
 
-
+    /* Überprüfen ob überhaupt ein server verfügbar ist wenn ja dann printet es den Kundennamen + der Preis seines ausgewählten Anegot wenn nein dan nicht*/
     switch (true) {
         case ($selectedCpu <= $smallServerCpu && $selectedRam <= $smallServerRam && $selectedSsd <= $smallServerSsd):
             $totalPrice = $cpuPrices[$selectedCpu] + $ramPrices[$selectedRam] + $ssdPrices[$selectedSsd];
@@ -193,12 +192,14 @@ elseif ($data[0] == "big") {
             file_put_contents($file, $totalPrice1 . "\n", FILE_APPEND);
             break;
         default:
-            $serverfull = "Kein Server kann Ihre Auswahl unterbringen. Sie müssen sich gedulden.";
             break;
     }
+    /*Hier wird der Gesamtumsatzt ausgerechnet. Wir wussten nicht wo wir das ausgeben sollen da wir ja als Unternehmen nicht möchten das jeder unser Gewinn sieht
+    mit der Variabel $totalSales kann mann aber den Umsatzt ausrechnen*/
     $file = 'sales.txt';
     $sales = file($file, FILE_IGNORE_NEW_LINES);
     $totalSales = array_sum($sales);
+    
 }
 ?>
 
@@ -242,10 +243,10 @@ elseif ($data[0] == "big") {
 </form>  
 
 <p class="gesamtpreis">Der Gesamtpreis beträgt: <?php echo $totalPrice;?> CHF .- /Monat </p>
+<p class="serverfull"><?php echo $serverfull ?></p>
 
-
+<!--Footer-->
 <footer> 
-
 <div class="footer">
   <div>
   <a href="Angebote.php">Angebote</a>

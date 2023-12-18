@@ -15,7 +15,6 @@
 <a href="index.php" class="logo ">OmniCloud</a>
 <!-- Navigation -->
     <nav class = "navMenu">
-
     <a href="index.php">Home</a>
     <a href="Angebot.php">Angebote</a>
     <a href="Kontakt.php">Kontakt</a>
