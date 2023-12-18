@@ -242,6 +242,7 @@ elseif ($data[0] == "big") {
 </form>  
 
 <p class="gesamtpreis">Der Gesamtpreis beträgt: <?php echo $totalPrice;?> CHF .- /Monat </p>
+<p class="serverfull"><?php echo $serverfull;?></p>
 <!--Footer-->
 <footer> 
 <div class="footer">
