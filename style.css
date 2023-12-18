@@ -10,7 +10,6 @@
 form {
     width: 300px;
     margin: 0 auto;
-    margin-top: 10%;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #fff;
@@ -144,7 +143,7 @@ body{
 }
 
 .form-class-name {
-  margin-top: 10%; /* Ersetzen Sie 100px durch die tatsächliche Höhe Ihrer Navigation */
+  margin-top: 2%; /* Ersetzen Sie 100px durch die tatsächliche Höhe Ihrer Navigation */
 }
 
 /* Über Uns Seite */
@@ -202,6 +201,7 @@ padding-top: 5%;
   height: 100px;
   
 }
+
 
 .footer a{
   color: #fff;
