@@ -33,8 +33,8 @@ Ihre Informatik-Schüler*innen,<br>
 Anis Tabakovic, Vincent Bernardini, Mirella Damiano</p>
 </div>
 <p class = kntform> Bei weiteren Fragen oder Anliegnen können Sie uns gerne kontaktieren.</p>
-<!-- Forum für beschwerde / angliege -->
-<form action="Formular ist nur fürs Aussehen, nicht Funktional" method="post">
+<!-- Forum für beschwerde / angliege Formular ist nur zum anschauen hat keine Funktionen -->
+<form action="UeberUns.php" method="post">
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name" required><br>
   <label for="problem">Problem:</label><br>

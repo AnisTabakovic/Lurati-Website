@@ -29,7 +29,7 @@
 <?php
 $serverfull = "";
 $totalPrice = 0;
-//Deklarirung der Server
+//Deklarirung der Server assoziative array
 $SmallServer = [
     "Cores" => 4,
     "Ram"   => 32768,
