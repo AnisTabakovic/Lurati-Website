@@ -10,6 +10,7 @@
 form {
     width: 300px;
     margin: 0 auto;
+    margin-top: 10%;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #fff;
@@ -201,7 +202,6 @@ padding-top: 5%;
   height: 100px;
   
 }
-
 
 .footer a{
   color: #fff;
