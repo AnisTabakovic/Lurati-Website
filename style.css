@@ -13,8 +13,6 @@ form {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #fff;
-    
-
 }
 
 label {
@@ -23,31 +21,26 @@ label {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #fff;
-    
 }
 
 select {
     width: 100%;
     height: 30px;
     margin-top: 20px;
-    
 }
 
 input[type="text"] {
     margin-top: 20px;
     width: 100%;
     height: 30px;
-    
-   
 }
 
 input[type="submit"] {
     margin-top: 20px;
     width: 100%;
     height: 30px;
-    
 }
-
+/*body*/
 body{
   min-height: 110vh;
   background: url('wolkenbilld2.png') no-repeat;
@@ -56,17 +49,14 @@ body{
   position: relative;
   filter: grayscale(10%);
   -webkit-filter: grayscale(10%);
-
 }
-
+/*home page*/x
 .text-homepage{
   text-align: center;
   color: #fff;
   font-weight: 700;
   font-size: 100px;
-
   padding-top: 5%;
-  
 }
 
 .text-homepage2{
@@ -87,8 +77,6 @@ body{
   padding-top: 30px;
 }
 
-
-
 .header{
   position: fixed;
   top: 0;
@@ -107,7 +95,6 @@ body{
   color: #fff;
   text-decoration: none;
   font-weight: 700;
-  
 }
 /*Designe Navigation */
 .navMenu a{
@@ -117,8 +104,8 @@ body{
   font-weight: 500;
   text-decoration: none;
   margin-left: 40px;
-
 }
+
 /* 
   Dieser Block definiert ein Pseudoelement ::before für alle Links in der .navMenu Klasse.
   Das Pseudoelement hat eine absolute Position und erscheint am unteren Rand des Links (top: 100%).
@@ -179,9 +166,6 @@ padding-top: 5%;
   color: #fff;
 }
 
-
-
-
 .footer{
   position: absolute;
   bottom: 0;
@@ -201,7 +185,6 @@ padding-top: 5%;
   height: 100px;
   
 }
-
 
 .footer a{
   color: #fff;
@@ -236,9 +219,5 @@ padding-top: 5%;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 5px;
-  font-size: 20px;
-  
-}
-
-
- 
+  font-size: 20px; 
+} 

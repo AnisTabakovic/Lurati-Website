@@ -27,7 +27,7 @@
 
 <div>
   <h1 class = uberuns>  Über uns</p>
-  <p class = uberunstext>Willkommen auf unserer Website! Wir sind drei Informatikschüler*innen der Mittelschule Basel im zweiten Jahr. Unser Team bietet eine vielfältige Auswahl an sorgfältig konfigurierten virtuellen Maschinen (VMs) an. Durch unsere gemeinsame Leidenschaft für Technologie und IT sind wir bestrebt, Ihnen hochwertige Lösungen zu präsentieren. Entdecken Sie die Welt der VMs mit unserem Team!<br>
+  <p class = uberunstext>Willkommen auf unserer Website! Wir sind drei Informatikschüler*innen der Informatikmittelschule Basel im zweiten Jahr. Unser Team bietet eine vielfältige Auswahl an sorgfältig konfigurierten virtuellen Maschinen (VMs) an. Durch unsere gemeinsame Leidenschaft für Technologie und IT sind wir bestrebt, Ihnen hochwertige Lösungen zu präsentieren. Entdecken Sie die Welt der VMs mit unserem Team!<br>
 <br>
 Ihre Informatik-Schüler*innen,<br>
 Anis Tabakovic, Vincent Bernardini, Mirella Damiano</p>
